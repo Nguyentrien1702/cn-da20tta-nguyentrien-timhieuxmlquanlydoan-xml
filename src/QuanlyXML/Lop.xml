@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DSLop>
+    <Lop Malop = "DA20TTA">
+        <Tenlop>Công nghệ thông tin A</Tenlop>
+        <Manganh>TT</Manganh>
+    </Lop>
+    <Lop Malop = "DA20TTB">
+        <Tenlop>Công nghệ thông tin B</Tenlop>
+        <Manganh>TT</Manganh>
+    </Lop>
+    <Lop Malop = "DA21TTA">
+        <Tenlop>Công nghệ thông tin A</Tenlop>
+        <Manganh>TT</Manganh>
+    </Lop>
+</DSLop>

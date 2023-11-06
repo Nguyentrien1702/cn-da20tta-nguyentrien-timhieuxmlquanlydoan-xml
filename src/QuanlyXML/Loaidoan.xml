@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DSLoaidoan>
+    <Loaidoan Maloaidoan = "CN-TT">
+        <Tenloai>Đồ án chuyên ngành</Tenloai>
+        <Manganh>TT</Manganh>
+    </Loaidoan>
+    <Loaidoan Maloaidoan = "CSN-TT">
+        <Tenloai>Đồ án cơ sở ngành</Tenloai>
+        <Manganh>TT</Manganh>
+    </Loaidoan>
+    <Loaidoan Maloaidoan = "TT-TT">
+        <Tenloai>Thực tập</Tenloai>
+        <Manganh>TT</Manganh>
+    </Loaidoan>
+</DSLoaidoan>
