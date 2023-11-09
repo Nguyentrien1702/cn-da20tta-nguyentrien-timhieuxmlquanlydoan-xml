@@ -28,16 +28,22 @@ if (isset($_POST['sbDangnhap'])) {
         // Đăng nhập thành công cho tài khoản Admin
         header("Location: ../Giaodien/Admin/Giaodien_admin.php");
         $_SESSION["tennguoidung"] = "admin";
+        exit;
     } elseif ($result === "Sinhvien") {
         // Đăng nhập thành công cho tài khoản Sinhvien
-        echo "Đăng nhập thành công cho tài khoản Sinhvien.";
-    } elseif ($result === "Giangvien") {
-        // Đăng nhập thành công cho tài khoản Giangvien
-        echo "Đăng nhập thành công cho tài khoản Giangvien.";
-    } else {
-        // Đăng nhập thất bại
-        echo "Đăng nhập thất bại. $result";
-    }
+        header("Location: ../Giaodien/Sinhvien/index_sinhvien.php");
+        $_SESSION["tennguoidung"] = "Sinh viên";
+        exit;
+        } elseif ($result === "Giangvien") {
+            // Đăng nhập thành công cho tài khoản Giangvien
+            header("Location: ../Giaodien/Giangvien/index_giangvien.php");
+            $_SESSION["tennguoidung"] = "Giảng viên";
+            exit;
+            } else {
+                // Đăng nhập thất bại
+                header("Location: ../index.php?txtTentaikhoan=" . urlencode($username). "&p=" . urlencode($result));
+                exit;
+            }
 }
 
 ?>

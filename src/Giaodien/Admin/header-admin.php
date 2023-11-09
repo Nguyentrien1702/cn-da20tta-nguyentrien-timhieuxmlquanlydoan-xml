@@ -8,14 +8,15 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body>
+<body style="background-color: beige">
 <?php
 // Start the session
 session_start();
 ?>
 <!-- Navbar -->
 <div class="w3-top">
-  <div class="w3-bar w3-gray w3-card">
+  <div class="w3-bar w3-gray w3-card" style="font-weight: 600;">
+    <a href="#" class="w3-bar-item w3-button w3-padding-large"><img width="25px" src="../../images/logotvu.png" alt="logo-tvu">
     <a href="#" class="w3-bar-item w3-button w3-padding-large">Trang chủ</a>
     <div class="w3-dropdown-hover w3-hide-small">
       <button class="w3-padding-large w3-button" title="More">Quản lý GV-SV <i class="fa fa-caret-down"></i></button>     
@@ -32,13 +33,13 @@ session_start();
         <a href="#" class="w3-bar-item w3-button">Quản lý lớp</a>
         <a href="#" class="w3-bar-item w3-button">Quản lý học kỳ</a>
         <a href="#" class="w3-bar-item w3-button">Quản lý loại đồ án</a>
-        <a href="#" class="w3-bar-item w3-button">Quản lý đồ án</a>
+        <a href="Taikhoan.php" class="w3-bar-item w3-button">Quản lý tài khoản</a>
       </div>
     </div>
     <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Quản lý đăng ký</a>
 <?php
-if($_SESSION["tennguoidung"] != null)
-    echo ("<a href='../../index.php' class='w3-bar-item w3-button w3-padding-large w3-hide-small w3-right'>Chào: " . $_SESSION["tennguoidung"]." (Thoát)</a>");
+  if($_SESSION["tennguoidung"] != null)
+      echo ("<a href='../../index.php' class='w3-bar-item w3-button w3-padding-large w3-hide-small w3-right'>Chào: " . $_SESSION["tennguoidung"]." (Thoát)</a>");
 ?>
   </div>
   </div class="w3-top"> 

@@ -2,37 +2,37 @@
 <DanhsachGV>
   <Giangvien MSGV="00246">
     <Tengiangvien>Nguyễn Ngọc Đan Thanh</Tengiangvien>
-    <Ngaysinh></Ngaysinh>
     <Gioitinh>Nữ</Gioitinh>
-    <Diachi>Trà vinh</Diachi>
-    <sodienthoai>0916741252</sodienthoai>
+    <Sodienthoai>0916741252</Sodienthoai>
+    <Email></Email>
+    <Phong>C71.102</Phong>
   </Giangvien>
   <Giangvien MSGV="00248">
     <Tengiangvien>Nguyễn Bảo Ân</Tengiangvien>
-    <Ngaysinh></Ngaysinh>
     <Gioitinh>Nam</Gioitinh>
-    <Diachi>Trà vinh</Diachi>
-    <sodienthoai>0907966998</sodienthoai>
+    <Sodienthoai>0907966998</Sodienthoai>
+    <Email></Email>
+    <Phong>C71.102</Phong>
   </Giangvien>
   <Giangvien MSGV="00249">
     <Tengiangvien>Phạm Minh Đương</Tengiangvien>
-    <Ngaysinh></Ngaysinh>
     <Gioitinh>Nam</Gioitinh>
-    <Diachi>Trà vinh</Diachi>
-    <sodienthoai>0868567268</sodienthoai>
+    <Sodienthoai>0868567268</Sodienthoai>
+    <Email></Email>
+    <Phong>C71.102</Phong>
   </Giangvien>
   <Giangvien MSGV="00250">
     <Tengiangvien>Đoàn Phước Miền</Tengiangvien>
-    <Ngaysinh></Ngaysinh>
     <Gioitinh>Nam</Gioitinh>
-    <Diachi>Trà vinh</Diachi>
-    <sodienthoai>0978962954</sodienthoai>
+    <Sodienthoai>0978962954</Sodienthoai>
+    <Email></Email>
+    <Phong>C71.102</Phong>
   </Giangvien>
   <Giangvien MSGV="00252">
     <Tengiangvien>Nguyễn Hoàng Duy Thiện</Tengiangvien>
-    <Ngaysinh></Ngaysinh>
     <Gioitinh>Nam</Gioitinh>
-    <Diachi>Trà vinh</Diachi>
-    <sodienthoai>0989274222</sodienthoai>
+    <Sodienthoai>0989274222</Sodienthoai>
+    <Email></Email>
+    <Phong>C71.102</Phong>
   </Giangvien>
 </DanhsachGV>

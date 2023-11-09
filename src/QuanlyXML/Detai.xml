@@ -13,7 +13,7 @@
         <MaHK-NK>HK1-2023-2024</MaHK-NK>
         <Magiangvien>00248</Magiangvien>
     </Detai>
-    <Detai Madetai = "CN-TT-02">
+    <Detai Madetai = "CN-TT-02" >
         <Tendetai>Xây dựng Website quản lý đoàn viên Khoa Kỹ thuật và Công nghệ</Tendetai>
         <Mota>
             Xây dựng Website có các chức năng:
