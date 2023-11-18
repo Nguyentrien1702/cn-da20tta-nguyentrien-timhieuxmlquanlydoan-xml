@@ -1,99 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<DanhsachSV>
-  <sinhvien MSSV="110120081">
-    <Tensinhvien>Nguyễn Triến</Tensinhvien>
-    <Ngaysinh>2002-02-17</Ngaysinh>
-    <Gioitinh>Nam</Gioitinh>
-    <Diachi>Trà vinh</Diachi>
+<dssinhvien>
+  <sinhvien mssv="110120081">
+    <tensinhvien>Nguyễn Triến</tensinhvien>
+    <gioitinh>Nam</gioitinh>
     <sodienthoai>0355871460</sodienthoai>
-    <MaLop>DA20TTA</MaLop>
+    <email>110120081@st.tvu.edu.vn</email>
+    <malop>DA20TTA</malop>
   </sinhvien>
-  <sinhvien MSSV="110120008">
-    <Tensinhvien>Nguyễn Thị Ngọc Chăm</Tensinhvien>
-    <Ngaysinh>2002-02-17</Ngaysinh>
-    <Gioitinh>Nữ</Gioitinh>
-    <Diachi>Trà vinh</Diachi>
+  <sinhvien mssv="110120008">
+    <tensinhvien>Nguyễn Thị Ngọc Chăm</tensinhvien>
+    <gioitinh>Nữ</gioitinh>
     <sodienthoai>0337254189</sodienthoai>
-    <MaLop>DA20TTA</MaLop>
+    <email>110120008@st.tvu.edu.vn</email>
+    <malop>DA20TTA</malop>
   </sinhvien>
-  <sinhvien MSSV="110120164">
-    <Tensinhvien>Mạch Khánh Duy</Tensinhvien>
-    <Ngaysinh>2001-08-23</Ngaysinh>
-    <Gioitinh>Nam</Gioitinh>
-    <Diachi>Cầu Kè</Diachi>
-    <sodienthoai>0302252512</sodienthoai>
-    <MaLop>DA20TTA</MaLop>
-  </sinhvien>
-  <sinhvien MSSV="110120121">
-    <Tensinhvien>Trần Ngô Quốc Thuận</Tensinhvien>
-    <Ngaysinh></Ngaysinh>
-    <Gioitinh>Nam</Gioitinh>
-    <Diachi>Trà vinh</Diachi>
-    <sodienthoai>0302252357</sodienthoai>
-    <MaLop>DA20TTB</MaLop>
-  </sinhvien>
-  <sinhvien MSSV="110120116">
-    <Tensinhvien>Thân Anh Tài</Tensinhvien>
-    <Ngaysinh>2002-02-23</Ngaysinh>
-    <Gioitinh>Nam</Gioitinh>
-    <Diachi>Trà vinh</Diachi>
-    <sodienthoai>0302257425</sodienthoai>
-    <MaLop>DA20TTB</MaLop>
-  </sinhvien>
-  <sinhvien MSSV="110120128">
-    <Tensinhvien>Huỳnh Gia Bảo</Tensinhvien>
-    <Ngaysinh>2002-11-21</Ngaysinh>
-    <Gioitinh>Nam</Gioitinh>
-    <Diachi>Trà vinh</Diachi>
-    <sodienthoai>0302257854</sodienthoai>
-    <MaLop>DA20TTA</MaLop>
-  </sinhvien>
-  <sinhvien MSSV="110120029">
-    <Tensinhvien>Huỳnh Hữu Hiếu </Tensinhvien>
-    <Ngaysinh>2002-10-23</Ngaysinh>
-    <Gioitinh>Nam</Gioitinh>
-    <Diachi>Trà vinh</Diachi>
-    <sodienthoai>0302252574</sodienthoai>
-    <MaLop>DA20TTA</MaLop>
-  </sinhvien>
-  <sinhvien MSSV="110120152">
-    <Tensinhvien>Lâm Ngọc Tài</Tensinhvien>
-    <Ngaysinh>2002-07-23</Ngaysinh>
-    <Gioitinh>Nam</Gioitinh>
-    <Diachi>Trà vinh</Diachi>
-    <sodienthoai>0302251587</sodienthoai>
-    <MaLop>DA20TTB</MaLop>
-  </sinhvien>
-  <sinhvien MSSV="110120026">
-    <Tensinhvien>Lâm Ngọc Hân</Tensinhvien>
-    <Ngaysinh>2001-09-02</Ngaysinh>
-    <Gioitinh>Nữ</Gioitinh>
-    <Diachi>Trà vinh</Diachi>
-    <sodienthoai>0302252147</sodienthoai>
-    <MaLop>DA20TTA</MaLop>
-  </sinhvien>
-  <sinhvien MSSV="110120077">
-    <Tensinhvien>Trần Quang Tiến</Tensinhvien>
-    <Ngaysinh>2002-01-01</Ngaysinh>
-    <Gioitinh>Nam</Gioitinh>
-    <Diachi>Trà vinh</Diachi>
-    <sodienthoai>0302259852</sodienthoai>
-    <MaLop>DA20TTA</MaLop>
-  </sinhvien>
-  <sinhvien MSSV="110120051">
-    <Tensinhvien>Trần Trọng Nhân</Tensinhvien>
-    <Ngaysinh>2002-06-09</Ngaysinh>
-    <Gioitinh>Nam</Gioitinh>
-    <Diachi>Cầu Ngang</Diachi>
-    <sodienthoai>0302259987</sodienthoai>
-    <MaLop>DA20TTA</MaLop>
-  </sinhvien>
-  <sinhvien MSSV="110120142">
-    <Tensinhvien>Thạch Tấn Lộc</Tensinhvien>
-    <Ngaysinh>2002-06-19</Ngaysinh>
-    <Gioitinh>Nam</Gioitinh>
-    <Diachi>Trà Vinh</Diachi>
-    <sodienthoai>0302251254</sodienthoai>
-    <MaLop>DA20TTB</MaLop>
-  </sinhvien>
-</DanhsachSV>
+</dssinhvien>

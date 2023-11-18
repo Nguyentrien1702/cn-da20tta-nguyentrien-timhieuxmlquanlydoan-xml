@@ -1,15 +1,15 @@
 <?php
 session_start();
+require("Xuly_XML/Xuly_taikhoan.php");
 // Hàm kiểm tra thông tin đăng nhập
 function kiemTraDangNhap($username, $password) {
     // Đọc tệp XML
     $xml = simplexml_load_file('../QuanlyXML/Taikhoan.xml');
-
-    foreach ($xml->Taikhoan as $taikhoan) {
-        if ((string) $taikhoan['Tentaikhoan'] === $username) {
-            if ((string) $taikhoan->Matkhau === $password) {
+    foreach ($xml->taikhoan as $taikhoan) {
+        if ((string) $taikhoan['tentaikhoan'] === $username) {
+            if (/*password_verify( $password, (string) $taikhoan->matkhau)*/$password = (string) $taikhoan->matkhau){
                 $_SESSION["allow"] = true;
-                return (string) $taikhoan->Loaitaikhoan;
+                return (string) $taikhoan->loaitaikhoan;
             } else {
                 return "Sai mật khẩu";
             }

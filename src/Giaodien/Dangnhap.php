@@ -8,7 +8,8 @@ if (isset($_GET['txtTentaikhoan']) && isset($_GET['p'])) {
     $loi = "";
 }
 ?>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<body style="background-color: beige;">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"/>
 <form action="Xuly/Xuly_Dangnhap.php" method="post">
     <div>
         <div class="container d-flex justify-content-center align-items-center min-vh-100">
@@ -70,3 +71,4 @@ if (isset($_GET['txtTentaikhoan']) && isset($_GET['p'])) {
     });
     
 </script>
+</body>

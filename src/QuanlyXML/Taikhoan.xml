@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<DSTaikhoan>
-    <Taikhoan Tentaikhoan = "Admin">
-        <Matkhau>admin</Matkhau>
-        <Loaitaikhoan>Admin</Loaitaikhoan>
-    </Taikhoan>
-    <Taikhoan Tentaikhoan = "110120081">
-        <Matkhau>123</Matkhau>
-        <Loaitaikhoan>Sinhvien</Loaitaikhoan>
-    </Taikhoan>
-    <Taikhoan Tentaikhoan = "00246">
-        <Matkhau>123</Matkhau>
-        <Loaitaikhoan>Giangvien</Loaitaikhoan>
-    </Taikhoan>
-</DSTaikhoan>
+<dstaikhoan>
+    <taikhoan tentaikhoan="Admin">
+        <matkhau>admin</matkhau>
+        <loaitaikhoan>Admin</loaitaikhoan>
+    </taikhoan>
+    <taikhoan tentaikhoan="110120081">
+        <matkhau>123</matkhau>
+        <loaitaikhoan>Sinhvien</loaitaikhoan>
+    </taikhoan>
+    <taikhoan tentaikhoan="00246">
+        <matkhau>1234</matkhau>
+        <loaitaikhoan>Giangvien</loaitaikhoan>
+    </taikhoan>
+</dstaikhoan>

@@ -1,61 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<DSDetai>
-    <Detai Madetai = "CN-TT-01">
-        <Tendetai>Ứng dụng AI để tạo hồ sơ minh chứng điện tử cho giảng viên từ bản giấy</Tendetai>
-        <Mota>
+<dsdetai>
+    <detai madetai = "CN-TT-01">
+        <tendetai>Ứng dụng AI để tạo hồ sơ minh chứng điện tử cho giảng viên từ bản giấy</tendetai>
+        <mota>
             - Nghiên cứu các thư viện OCR với Python
             - Tạo công cụ import ảnh của tài liệu và nhận dạng tên của cán bộ có trong tài liệu
             - Đưa tài liệu vào cơ sở dữ liệu và gán cho các cán bộ có tên trong danh sách
-        </Mota>
-        <Trangthaixetduyet>0</Trangthaixetduyet>
-        <Trangthaidangky>0</Trangthaidangky>
-        <Maloaidoan>CN-TT</Maloaidoan>
-        <MaHK-NK>HK1-2023-2024</MaHK-NK>
-        <Magiangvien>00248</Magiangvien>
-    </Detai>
-    <Detai Madetai = "CN-TT-02" >
-        <Tendetai>Xây dựng Website quản lý đoàn viên Khoa Kỹ thuật và Công nghệ</Tendetai>
-        <Mota>
+        </mota>
+        <trangthaixetduyet>0</trangthaixetduyet>
+        <trangthaidangky>0</trangthaidangky>
+        <maloaidoan>CN-TT</maloaidoan>
+        <mahk-nk>HK1-2023-2024</mahk-nk>
+        <msgv>00248</msgv>
+        <manganh>TT</manganh>
+        <ngayradetai></ngayradetai>
+    </detai>
+    <detai madetai = "CN-TT-02" >
+        <tendetai>Xây dựng Website quản lý đoàn viên Khoa Kỹ thuật và Công nghệ</tendetai>
+        <mota>
             Xây dựng Website có các chức năng:
             - Phân quyền đăng nhập
             - Quản lý thông tin đoàn viên
             - Quản lý hoạt động, phong trào của đoàn viên
             - Đánh giá, xếp loại tình hình hoạt động của chi đoàn, đoàn viên
-        </Mota>
-        <Trangthaixetduyet>0</Trangthaixetduyet>
-        <Trangthaidangky>0</Trangthaidangky>
-        <Maloaidoan>CN-TT</Maloaidoan>
-        <MaHK-NK>HK1-2023-2024</MaHK-NK>
-        <Magiangvien>00252</Magiangvien>
-    </Detai>
-    <Detai Madetai = "CN-TT-03">
-        <Tendetai>Xây dựng Website nhận dạng âm thanh</Tendetai>
-        <Mota>
-            Xây dựng Website cho phép sử dụng microphone của thiết bị để thực hiện việc ghi âm, có lựa chọn nghe lại, có thể lưu trực tiếp về thiết bị sau khi ghi âm, thực hiện việc chuyển đổi bản ghi âm thành văn bản
-        </Mota>
-        <Trangthaixetduyet>0</Trangthaixetduyet>
-        <Trangthaidangky>0</Trangthaidangky>
-        <Maloaidoan>CN-TT</Maloaidoan>
-        <MaHK-NK>HK1-2023-2024</MaHK-NK>
-        <Magiangvien>00252</Magiangvien>
-    </Detai>
-    <Detai Madetai = "CN-TT-04">
-        <Tendetai>Tìm hiểu Laravel Framework và xây dựng website bán máy tính</Tendetai>
-        <Mota></Mota>
-        <Trangthaixetduyet>0</Trangthaixetduyet>
-        <Trangthaidangky>0</Trangthaidangky>
-        <Maloaidoan>CN-TT</Maloaidoan>
-        <MaHK-NK>HK1-2023-2024</MaHK-NK>
-        <Magiangvien>00246</Magiangvien>
-    </Detai>
-    <Detai Madetai = "CN-TT-05">
-        <Tendetai>Ứng dụng Laravel Framework xây dựng website giới thiệu tour du lịch</Tendetai>
-        <Mota></Mota>
-        <Trangthaixetduyet>0</Trangthaixetduyet>
-        <Trangthaidangky>0</Trangthaidangky>
-        <Maloaidoan>CN-TT</Maloaidoan>
-        <MaHK-NK>HK1-2023-2024</MaHK-NK>
-        <Magiangvien>00249</Magiangvien>
-    </Detai>
-
-</DSDetai>
+        </mota>
+        <trangthaixetduyet>0</trangthaixetduyet>
+        <trangthaidangky>0</trangthaidangky>
+        <maloaidoan>CN-TT</maloaidoan>
+        <mahk-nk>HK1-2023-2024</mahk-nk>
+        <msgv>00252</msgv>
+        <manganh>TT</manganh>
+        <ngayradetai></ngayradetai>
+    </detai>
+</dsdetai>

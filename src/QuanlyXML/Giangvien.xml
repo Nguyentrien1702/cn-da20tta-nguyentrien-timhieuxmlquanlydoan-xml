@@ -1,38 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<DanhsachGV>
-  <Giangvien MSGV="00246">
-    <Tengiangvien>Nguyễn Ngọc Đan Thanh</Tengiangvien>
-    <Gioitinh>Nữ</Gioitinh>
-    <Sodienthoai>0916741252</Sodienthoai>
-    <Email></Email>
-    <Phong>C71.102</Phong>
-  </Giangvien>
-  <Giangvien MSGV="00248">
-    <Tengiangvien>Nguyễn Bảo Ân</Tengiangvien>
-    <Gioitinh>Nam</Gioitinh>
-    <Sodienthoai>0907966998</Sodienthoai>
-    <Email></Email>
-    <Phong>C71.102</Phong>
-  </Giangvien>
-  <Giangvien MSGV="00249">
-    <Tengiangvien>Phạm Minh Đương</Tengiangvien>
-    <Gioitinh>Nam</Gioitinh>
-    <Sodienthoai>0868567268</Sodienthoai>
-    <Email></Email>
-    <Phong>C71.102</Phong>
-  </Giangvien>
-  <Giangvien MSGV="00250">
-    <Tengiangvien>Đoàn Phước Miền</Tengiangvien>
-    <Gioitinh>Nam</Gioitinh>
-    <Sodienthoai>0978962954</Sodienthoai>
-    <Email></Email>
-    <Phong>C71.102</Phong>
-  </Giangvien>
-  <Giangvien MSGV="00252">
-    <Tengiangvien>Nguyễn Hoàng Duy Thiện</Tengiangvien>
-    <Gioitinh>Nam</Gioitinh>
-    <Sodienthoai>0989274222</Sodienthoai>
-    <Email></Email>
-    <Phong>C71.102</Phong>
-  </Giangvien>
-</DanhsachGV>
+<dssachgv>
+  <giangvien msgv="00246">
+    <tengiangvien>Nguyễn Ngọc Đan Thanh</tengiangvien>
+    <gioitinh>Nữ</gioitinh>
+    <sodienthoai>0916741252</sodienthoai>
+    <email></email>
+    <phong>C71.102</phong>
+  </giangvien>
+  <giangvien msgv="00248">
+    <tengiangvien>Nguyễn Bảo Ân</tengiangvien>
+    <gioitinh>Nam</gioitinh>
+    <sodienthoai>0907966998</sodienthoai>
+    <email></email>
+    <phong>C71.102</phong>
+  </giangvien>
+</dssachgv>

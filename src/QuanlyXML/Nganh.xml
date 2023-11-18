@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<DSNganh>
-    <Nganh  Manganh = "TT">
-        <Tennganh>Công nghệ thông tin</Tennganh>
-    </Nganh>
-
-</DSNganh>
+<dsnganh>
+    <nganh manganh="TT">
+        <tennganh>Công nghệ thông tin</tennganh>
+    </nganh>
+</dsnganh>
