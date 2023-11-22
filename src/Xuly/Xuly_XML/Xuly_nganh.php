@@ -23,7 +23,14 @@ function addNganh($xmlFilePath, $manganh, $tennganh) {
     $newNganh->addAttribute('manganh', $manganh);
     $newNganh->addChild('tennganh', $tennganh);
 
-    $xml->asXML($xmlFilePath);
+    // Định dạng xuống dòng và thụt đầu dòng
+    $dom = new DOMDocument('1.0');
+    $dom->preserveWhiteSpace = false;
+    $dom->formatOutput = true;
+    $dom->loadXML($xml->asXML());
+
+    // Lưu thay đổi vào tệp XML
+    $dom->save($xmlFilePath);
 }
 
 // Hàm cập nhật thông tin Ngành
@@ -61,7 +68,7 @@ function myAlert($msg, $url){
 }
 
 if(isset($_POST["sbmthem"])){
-    $_SESSION["them"] = true;
+
     $manganh = $_POST["txtmanganh"];
     $tennganh = $_POST["txttennganh"];
 

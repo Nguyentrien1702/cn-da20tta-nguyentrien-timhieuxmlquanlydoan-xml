@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dslop>
-    <lop malop = "DA20TTA">
-        <tenlop>Công nghệ thông tin A</tenlop>
-        <manganh>TT</manganh>
-        <khoa>2020</khoa>
-    </lop>
-    <lop malop = "DA20TTB">
-        <tenlop>Công nghệ thông tin B</tenlop>
-        <manganh>TT</manganh>
-        <khoa>2020</khoa>
-    </lop>
-    <lop malop = "DA21TTA">
-        <tenlop>Công nghệ thông tin A</tenlop>
-        <manganh>TT</manganh>
-        <khoa>2021</khoa>
-    </lop>
+  <lop malop="DA20TTA">
+    <tenlop>Công nghệ thông tin A</tenlop>
+    <manganh>TT</manganh>
+    <khoa>2020</khoa>
+  </lop>
+  <lop malop="DA20TTB">
+    <tenlop>Công nghệ thông tin B</tenlop>
+    <manganh>TT</manganh>
+    <khoa>2020</khoa>
+  </lop>
+  <lop malop="DA21TTA">
+    <tenlop>Công nghệ thông tin A</tenlop>
+    <manganh>TT</manganh>
+    <khoa>2021</khoa>
+  </lop>
+  
 </dslop>

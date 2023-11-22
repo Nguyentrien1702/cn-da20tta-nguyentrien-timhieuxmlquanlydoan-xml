@@ -30,8 +30,8 @@ session_start();
       <button class="w3-padding-large w3-button" title="More">Quản lý khác <i class="fa fa-caret-down"></i></button>     
       <div class="w3-dropdown-content w3-bar-block w3-card-4">
         <a href="nganh.php" class="w3-bar-item w3-button">Quản lý ngành</a>
-        <a href="#" class="w3-bar-item w3-button">Quản lý lớp</a>
-        <a href="#" class="w3-bar-item w3-button">Quản lý học kỳ</a>
+        <a href="lop.php" class="w3-bar-item w3-button">Quản lý lớp</a>
+        <a href="hocky.php" class="w3-bar-item w3-button">Quản lý học kỳ</a>
         <a href="#" class="w3-bar-item w3-button">Quản lý loại đồ án</a>
         <a href="Taikhoan.php" class="w3-bar-item w3-button">Quản lý tài khoản</a>
       </div>

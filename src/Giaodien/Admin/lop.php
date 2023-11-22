@@ -69,35 +69,47 @@
 
     </style>
     <div class="w3-content">
-    <h1>Danh sách ngành</h1>
+    <h1>Danh sách lớp</h1>
     
-    <button id="themmoi" class="w3-button w3-green" onclick="location.href='Them_nganh.php'">Thêm mới</button>
+    <button id="themmoi" class="w3-button w3-green" onclick="location.href='Them_lop.php'">Thêm mới</button>
 
     <table id="accountTable" class="w3-table w3-bordered w3-striped display" style="width: 100%; margin-top: 10px;">
         <thead>
             <tr>
                 <th class="table-header">STT</th>
-                <th class="table-header">Mã ngành</th>
-                <th class="table-header">Tên ngành</th>
+                <th class="table-header">Mã lớp</th>
+                <th class="table-header">Tên lớp</th>
+                <th class="table-header">Ngành học</th>
                 <th class="table-header">Thao tác</th>
             </tr>
         </thead>
         <tbody>
             <?php
-                $xmlFilePath = '../../QuanlyXML/Nganh.xml';
+                $xmlFilePath = '../../QuanlyXML/Lop.xml';
                 $xml = simplexml_load_file($xmlFilePath);
+
+                $xmlFilePath1 = '../../QuanlyXML/Nganh.xml';
+                $xml1 = simplexml_load_file($xmlFilePath1);
                 $i = 1;
 
-                foreach ($xml->nganh as $nganh) {
+                foreach ($xml->lop as $lop) {
                     echo "<tr>";
                     echo "<td>". $i++ ."</td>";
-                    echo "<td>{$nganh['manganh']}</td>";
-                    echo "<td>{$nganh->tennganh}</td>";
-                    $ma = $nganh['manganh'];
-                    $ten = $nganh->tennganh;
+                    echo "<td>{$lop['malop']}</td>";
+                    echo "<td>{$lop->tenlop}</td>";
+
+                    foreach ($xml1->nganh as $nganh){
+                        if((String)$lop->manganh == (String)$nganh['manganh']){
+                            echo "<td>{$lop->manganh} - {$nganh->tennganh}</td>";
+                            break;
+                        }
+                    }
+                    
+                    $ma = $lop['malop'];
+                    
                     echo "<td style='text-align: center;'>
-                            <a id='sua' href='Sua_nganh.php?manganh_sua=$ma&tennganh=$ten' style = 'margin-right: 30px' >Sửa</a>"?>
-                            <a onclick = "return confirm('Bạn có thật sự muốn xóa ngành này hay không?')" id='xoa' href="../../Xuly/Xuly_XML/Xuly_nganh.php?manganh=<?php echo $ma ?>">Xóa</a></td>
+                            <a id='sua' href='Sua_lop.php?malop_sua={$lop['malop']}&tenlop={$lop->tenlop}&manganh={$lop->manganh}' style = 'margin-right: 30px' >Sửa</a>"?>
+                            <a onclick = "return confirm('Bạn có thật sự muốn xóa lớp này hay không?')" id='xoa' href="../../Xuly/Xuly_XML/Xuly_lop.php?manganh=<?php echo $ma ?>">Xóa</a></td>
             <?php
                     echo "</tr>";
                 }

@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dsnganh>
-    <nganh manganh="TT">
-        <tennganh>Công nghệ thông tin</tennganh>
-    </nganh>
-<nganh manganh="TTNT"><tennganh>Trí tuệ nhân tạo</tennganh></nganh></dsnganh>
+  <nganh manganh="TT">
+    <tennganh>Công nghệ thông tin</tennganh>
+  </nganh>
+  <nganh manganh="TTNT">
+    <tennganh>Trí tuệ nhân tạo</tennganh>
+  </nganh>
+</dsnganh>
