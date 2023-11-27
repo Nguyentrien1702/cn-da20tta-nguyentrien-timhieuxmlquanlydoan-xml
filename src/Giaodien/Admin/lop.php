@@ -3,71 +3,10 @@
 ?>
     <title>Quản lý ngành</title>
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css">
+    <link rel="stylesheet" href="css/style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js"></script>
-    <style>
-        /* Định dạng màu cho bảng */
-        #accountTable {
-            background-color: #f0f0f0;
-        }
-
-        /* Định dạng cho các dòng tiêu đề */
-        .table-header {
-            background-color: #333;
-            color: #fff;
-            font-weight: bold;
-        }
-
-        /* Định dạng màu chữ cho nội dung */
-        #accountTable td {
-            color: #555;
-        }
-
-        /* Định dạng màu cho hàng chẵn */
-        #accountTable tr:nth-child(even) {
-            background-color: #f8f8f8;
-        }
-
-        /* Định dạng màu cho hàng lẻ */
-        #accountTable tr:nth-child(odd) {
-            background-color: #f0f0f0;
-        }
-        div.dataTables_wrapper div.dataTables_filter {
-            text-align: right; /* Align the search bar to the right */
-            margin-bottom: 20px; /* Add some space between the search bar and the table */
-        }
-        h1 {
-            text-align: center;
-            font-weight: bold;
-            color: red;
-        }
-        #themmoi {
-            margin-bottom: 10px;
-            padding: 10px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: bold;
-        }
-        #themmoi:hover{
-            background-color: blue !important;
-        }
-        #sua, #xoa{
-            padding: 4px;
-            background-color: cadetblue;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            text-decoration: none;
-        }
-        #sua:hover, #xoa:hover{
-            background-color: #4CAF50;
-        }
-
-    </style>
+    
     <div class="w3-content">
     <h1>Danh sách lớp</h1>
     
@@ -96,7 +35,7 @@
                     echo "<tr>";
                     echo "<td>". $i++ ."</td>";
                     echo "<td>{$lop['malop']}</td>";
-                    echo "<td>{$lop->tenlop}</td>";
+                    echo "<td>{$lop->tenlop} khóa {$lop->khoa}</td>";
 
                     foreach ($xml1->nganh as $nganh){
                         if((String)$lop->manganh == (String)$nganh['manganh']){
@@ -108,8 +47,8 @@
                     $ma = $lop['malop'];
                     
                     echo "<td style='text-align: center;'>
-                            <a id='sua' href='Sua_lop.php?malop_sua={$lop['malop']}&tenlop={$lop->tenlop}&manganh={$lop->manganh}' style = 'margin-right: 30px' >Sửa</a>"?>
-                            <a onclick = "return confirm('Bạn có thật sự muốn xóa lớp này hay không?')" id='xoa' href="../../Xuly/Xuly_XML/Xuly_lop.php?manganh=<?php echo $ma ?>">Xóa</a></td>
+                            <a id='sua' href='Sua_lop.php?malop_sua={$lop['malop']}&tenlop={$lop->tenlop}&khoa={$lop->khoa}&manganh={$lop->manganh}' style = 'margin-right: 30px' >Sửa</a>"?>
+                            <a onclick = "return confirm('Bạn có thật sự muốn xóa lớp này hay không?')" id='xoa' href="../../Xuly/Xuly_XML/Xuly_lop.php?malop=<?php echo $ma ?>">Xóa</a></td>
             <?php
                     echo "</tr>";
                 }

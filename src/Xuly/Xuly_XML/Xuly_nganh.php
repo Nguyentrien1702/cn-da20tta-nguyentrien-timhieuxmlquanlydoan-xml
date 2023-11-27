@@ -73,7 +73,7 @@ if(isset($_POST["sbmthem"])){
     $tennganh = $_POST["txttennganh"];
 
     if(isNganhExists($xmlFilePath, $manganh)){
-        myAlert("Mã ngành đã tồn tại","../../Giaodien/Admin/Them_nganh.php?manganh=$manganh&tennganh=$tennganh");
+        myAlert("Mã ngành đã tồn tại","../../Giaodien/Admin/nganh.php?manganh=$manganh&tennganh=$tennganh");
     }
     else{
         addNganh($xmlFilePath, $manganh, $tennganh);

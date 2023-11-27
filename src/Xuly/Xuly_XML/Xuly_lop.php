@@ -16,12 +16,13 @@ function isLopExists($xmlFilePath, $malop) {
 }
 
 // Hàm thêm Lớp mới
-function addLop($xmlFilePath, $malop, $tenlop, $manganh) {
+function addLop($xmlFilePath, $malop, $tenlop, $khoa, $manganh) {
     $xml = simplexml_load_file($xmlFilePath);
 
     $newLop = $xml->addChild('lop');
     $newLop->addAttribute('malop', $malop);
     $newLop->addChild('tenlop', $tenlop);
+    $newLop->addChild('khoa', $khoa);
     $newLop->addChild('manganh', $manganh);
 
     // Định dạng xuống dòng và thụt đầu dòng
@@ -35,13 +36,14 @@ function addLop($xmlFilePath, $malop, $tenlop, $manganh) {
 }
 
 // Hàm cập nhật thông tin Ngành
-function updateLop($xmlFilePath, $malop, $tenlop, $manganh) {
+function updateLop($xmlFilePath, $malop, $tenlop, $khoa, $manganh) {
     $xml = simplexml_load_file($xmlFilePath);
     // Tìm và cập nhật thông tin Ngành
     foreach ($xml->lop as $lop) {
         if ((string)$lop['malop'] === $malop) {
             // Cập nhật Ngành
             $lop->tenlop = $tenlop;
+            $lop->khoa = $khoa;
             $lop->manganh = $manganh;
 
             // Lưu thay đổi vào tệp XML
@@ -73,13 +75,14 @@ if(isset($_POST["sbmthem"])){
 
     $malop = $_POST["txtmalop"];
     $tenlop = $_POST["txttenlop"];
+    $khoa = $_POST["txtkhoa"];
     $manganh = $_POST["txtmanganh"];
 
     if(isLopExists($xmlFilePath, $malop)){
-        myAlert("Mã ngành đã tồn tại","../../Giaodien/Admin/Them_lop.php?malop=$malop&tenlop=$tenlop&manganh=$manganh");
+        myAlert("Mã ngành đã tồn tại","../../Giaodien/Admin/Them_lop.php?malop=$malop&tenlop=$tenlop&khoa=$khoa&manganh=$manganh");
     }
     else{
-        addLop($xmlFilePath, $malop, $tenlop, $manganh);
+        addLop($xmlFilePath, $malop, $tenlop, $khoa, $manganh);
         header("Location: ../../Giaodien/Admin/lop.php");
     }
 }
@@ -89,8 +92,9 @@ if(isset($_POST["sbmhuy"])){
 if(isset($_POST["sbmcapnhat"])){
     $malop = $_POST["txtmalop"];
     $tenlop = $_POST["txttenlop"];
+    $khoa = $_POST["txtkhoa"];
     $manganh = $_POST["txtmanganh"];
-    updateLop($xmlFilePath, $malop, $tenlop, $manganh);
+    updateLop($xmlFilePath, $malop, $tenlop, $khoa, $manganh);
     header("Location: ../../Giaodien/Admin/lop.php");
 }
 if(isset($_GET["malop"])){
