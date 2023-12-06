@@ -1,62 +1,71 @@
+/* Định dạng màu cho bảng */
+#accountTable {
+    background-color: #f0f0f0;
+}
 
-        /* Định dạng màu cho bảng */
-        #accountTable {
-            background-color: #f0f0f0;
-        }
+/* Định dạng cho các dòng tiêu đề */
+.table-header {
+    background-color: #333;
+    color: #fff;
+    font-weight: bold;
+}
 
-        /* Định dạng cho các dòng tiêu đề */
-        .table-header {
-            background-color: #333;
-            color: #fff;
-            font-weight: bold;
-        }
+/* Định dạng màu chữ cho nội dung */
+#accountTable td {
+    color: #555;
+}
 
-        /* Định dạng màu chữ cho nội dung */
-        #accountTable td {
-            color: #555;
-        }
+/* Định dạng màu cho hàng chẵn */
+#accountTable tr:nth-child(even) {
+    background-color: #f8f8f8;
+}
 
-        /* Định dạng màu cho hàng chẵn */
-        #accountTable tr:nth-child(even) {
-            background-color: #f8f8f8;
-        }
+/* Định dạng màu cho hàng lẻ */
+#accountTable tr:nth-child(odd) {
+    background-color: #f0f0f0;
+}
 
-        /* Định dạng màu cho hàng lẻ */
-        #accountTable tr:nth-child(odd) {
-            background-color: #f0f0f0;
-        }
-        div.dataTables_wrapper div.dataTables_filter {
-            text-align: right; /* Align the search bar to the right */
-            margin-bottom: 20px; /* Add some space between the search bar and the table */
-        }
-        h1 {
-            text-align: center;
-            font-weight: bold;
-            color: red;
-        }
-        #themmoi {
-            margin-bottom: 10px;
-            padding: 10px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: bold;
-        }
-        #themmoi:hover{
-            background-color: blue !important;
-        }
-        #sua, #xoa{
-            padding: 4px;
-            background-color: cadetblue;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            text-decoration: none;
-        }
-        #sua:hover, #xoa:hover{
-            background-color: #4CAF50;
-        }
+div.dataTables_wrapper div.dataTables_filter {
+    text-align: right;
+    /* Align the search bar to the right */
+    margin-bottom: 20px;
+    /* Add some space between the search bar and the table */
+}
+
+h1 {
+    text-align: center;
+    font-weight: bold;
+    color: red;
+}
+
+#themmoi {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#themmoi:hover {
+    background-color: blue !important;
+}
+
+#sua,
+#xoa {
+    padding: 4px;
+    background-color: cadetblue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#sua:hover,
+#xoa:hover {
+    background-color: #4CAF50;
+}
 

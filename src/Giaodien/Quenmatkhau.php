@@ -10,15 +10,15 @@
 <body style="background-color: beige;">
 <?php
 // Kiểm tra xem có tham số URL "Tentaikhoan" được truyền
-if (isset($_GET['Tentaikhoan']) && isset($_GET['p'])) {
-    $tenDangNhap = $_GET['Tentaikhoan'];
+if (isset($_GET['tentaikhoan']) && isset($_GET['p'])) {
+    $tenDangNhap = $_GET['tentaikhoan'];
     $loi = $_GET['p'];
 } else {
     $tenDangNhap = "";
     $loi = "";
 }
 ?>
-<form name="formquenmatkhau" action="../Xuly/Xuly_Quenmatkhau.php" method="post">
+<form name="formquenmatkhau" action="../Xuly/Xuly_Quenmatkhau.php" method="post" onsubmit="return ssmatkhau()">
       <div>
         <div class="container d-flex justify-content-center align-items-center min-vh-100">
             <div class="row border rounded-4 p-3 bg-white shadow box-area">
@@ -35,19 +35,19 @@ if (isset($_GET['Tentaikhoan']) && isset($_GET['p'])) {
                     <h3 class="mb-4"><strong>Quên mật khẩu</strong></h3>
                     <!-- Tên đăng nhập-->
                     <div class="input-group mb-3"> 
-                      <input type="text" name="txtTentaikhoan" class="form-control form-control-lg bg-light fs-6" placeholder="Tên đăng nhập" value="<?php echo $tenDangNhap; ?>"/>
+                      <input type="text" id="txttentaikhoan" name="txttentaikhoan" class="form-control form-control-lg bg-light fs-6" placeholder="Tên đăng nhập" value="<?php echo $tenDangNhap; ?>" required/>
                     </div>
                     <!-- Họ tên-->
                     <div class="input-group mb-3"> 
-                      <input type="text" name="txthoten" class="form-control form-control-lg bg-light fs-6" placeholder="Họ và tên"/>
+                      <input type="text" id="txthoten" name="txthoten" class="form-control form-control-lg bg-light fs-6" placeholder="Họ và tên" required/>
                     </div>
                     <!-- Mật khẩu mới-->
                     <div class="input-group mb-3">
-                      <input type="password" name="txtmatkhau" class="form-control form-control-lg bg-light fs-6" placeholder="Mật khẩu mới"/>
+                      <input type="password" id="txtmatkhau" name="txtmatkhau" class="form-control form-control-lg bg-light fs-6" placeholder="Mật khẩu mới" required/>
                     </div>
                     <!--Xác nhận mật khẩu mới-->
                     <div class="input-group mb-3">
-                      <input type="password" name="txtxnmatkhau" class="form-control form-control-lg bg-light fs-6" placeholder="Nhập lại mật khẩu"/>
+                      <input type="password" id="txtxnmatkhau" name="txtxnmatkhau" class="form-control form-control-lg bg-light fs-6" placeholder="Nhập lại mật khẩu" required/>
                     </div>
                     <!-- Thông báo-->
                     <div class="input-group mb-3">
@@ -59,7 +59,7 @@ if (isset($_GET['Tentaikhoan']) && isset($_GET['p'])) {
                       </div>
                       &nbsp;
                       <div class="input-group mb-3">
-                          <input type="submit" name="sbhuy" class="btn btn-lg btn-primary w-100 fs-6 p-1" value="Hủy">
+                          <input type="button" name="sbhuy" onclick="window.location.href='../index.php'" class="btn btn-lg btn-primary w-100 fs-6 p-1" value="Hủy">
                       </div>
                     </div>
                   </div>
@@ -71,19 +71,36 @@ if (isset($_GET['Tentaikhoan']) && isset($_GET['p'])) {
     </form>
   <script>
     // Lấy tham chiếu đến các trường input và thẻ p "alert"
-    const txtTentaikhoan = document.getElementById("txtTentaikhoan");
-    const txtMatkhau = document.getElementById("txtMatkhau");
+    const txtTentaikhoan = document.getElementById("txttentaikhoan");
+    const txthoten = document.getElementById("txthoten");
+    const txtMatkhau = document.getElementById("txtmatkhau");
+    const txtmkmoi = document.getElementById("txtxnmatkhau");
     const alertP = document.getElementById("alert");
 
     // Sử dụng sự kiện click để ẩn thẻ "alert" khi một trong hai trường input được click
     txtTentaikhoan.addEventListener("click", function () {
         alertP.style.display = "none";
     });
+    txthoten.addEventListener("click", function () {
+        alertP.style.display = "none";
+    });
 
     txtMatkhau.addEventListener("click", function () {
         alertP.style.display = "none";
     });
+    txtmkmoi.addEventListener("click", function () {
+        alertP.style.display = "none";
+    });
     
+    function ssmatkhau(){
+      if(txtMatkhau.value !== txtmkmoi.value){
+        alertP.textContent= "xác nhận mật khẩu chưa đúng";
+        alertP.style.display = "block";
+        txtmkmoi.nodeValue="";
+        return false;
+      }
+      else return true;
+    }
 </script>
 </body>
 </html>

@@ -3,7 +3,7 @@
   <sinhvien mssv="110120081">
     <tensinhvien>Nguyễn Triến</tensinhvien>
     <gioitinh>Nam</gioitinh>
-    <sodienthoai>0355871460</sodienthoai>
+    <sodienthoai>0366480701</sodienthoai>
     <email>110120081@st.tvu.edu.vn</email>
     <malop>DA20TTA</malop>
   </sinhvien>
@@ -14,4 +14,12 @@
     <email>110120008@st.tvu.edu.vn</email>
     <malop>DA20TTA</malop>
   </sinhvien>
+  <sinhvien mssv="110120164">
+    <tensinhvien>Mạch Khánh Duy</tensinhvien>
+    <gioitinh>Nam</gioitinh>
+    <sodienthoai/>
+    <email>110120164@st.tvu.edu.vn</email>
+    <malop>DA20TTA</malop>
+  </sinhvien>
+  
 </dssinhvien>

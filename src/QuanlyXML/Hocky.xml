@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dshocky>
-    <hocky mahk-nk="HK2-2022-2023">
-        <tenhocky>Học kỳ 2</tenhocky>
-        <nienkhoa>2022-2023</nienkhoa>
-        <ngaybatdau>30-01-2023</ngaybatdau>
-        <ngayketthuc>13-06-2023</ngayketthuc>
-    </hocky>
-    <hocky mahk-nk="HK1-2023-2024">
-        <tenhocky>Học kỳ 1</tenhocky>
-        <nienkhoa>2023-2024</nienkhoa>
-        <ngaybatdau>04-09-2023</ngaybatdau>
-        <ngayketthuc>22-12-2023</ngayketthuc>
-    </hocky>
+  <hocky mahk-nk="HK2-2022-2023">
+    <tenhocky>Học kỳ 2</tenhocky>
+    <nienkhoa>2022-2023</nienkhoa>
+    <ngaybatdau>30-01-2023</ngaybatdau>
+    <ngayketthuc>13-06-2023</ngayketthuc>
+  </hocky>
+  <hocky mahk-nk="HK1-2023-2024">
+    <tenhocky>Học kỳ 1</tenhocky>
+    <nienkhoa>2023-2024</nienkhoa>
+    <ngaybatdau>04-09-2023</ngaybatdau>
+    <ngayketthuc>22-12-2023</ngayketthuc>
+  </hocky>
 </dshocky>

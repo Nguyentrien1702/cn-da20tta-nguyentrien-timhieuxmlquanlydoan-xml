@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dsthoigian>
+  <thoigian matg="65703f4b422eb">
+    <quyen>giangvien</quyen>
+    <maloaidoan>CSN-TT</maloaidoan>
+    <namhoc>2022-2023</namhoc>
+    <ngaybatdau>2023-12-06</ngaybatdau>
+    <ngayketthuc>2023-12-13</ngayketthuc>
+  </thoigian>
+  <thoigian matg="65707d9f6aa14">
+    <quyen>sinhvien</quyen>
+    <maloaidoan>CSN-TT</maloaidoan>
+    <namhoc>2022-2023</namhoc>
+    <ngaybatdau>2023-12-07</ngaybatdau>
+    <ngayketthuc>2023-12-15</ngayketthuc>
+  </thoigian>
+</dsthoigian>

@@ -83,7 +83,7 @@ if(isset($_POST["sbmthem"])){
 
 
     if(isHockyExists($xmlFilePath, $mahknk)){
-        myAlert("Mã học kỳ đã tồn tại","../../Giaodien/Admin/Them_hocky.php?mahk-nk=$mahknk&tenhocky=$tenhocky&nienkhoa=$nienkhoa&ngaybatdau=$ngaybatdau&ngayketthuc=$ngayketthuc");
+        myAlert("Mã học kỳ đã tồn tại","../../Giaodien/Admin/hocky.php?mahk-nk=$mahknk&tenhocky=$tenhocky&nienkhoa=$nienkhoa&ngaybatdau=$ngaybatdau&ngayketthuc=$ngayketthuc");
     }
     else{
         addHocky($xmlFilePath, $mahknk, $tenhocky, $nienkhoa, $ngaybatdau, $ngayketthuc);

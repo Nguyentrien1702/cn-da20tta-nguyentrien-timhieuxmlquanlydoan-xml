@@ -15,14 +15,6 @@ function isAccountExists($xmlFilePath, $username) {
     return false;
 }
 
-//Hàm mã hóa mật khẩu
-function hashPassword($password) {
-    // Sử dụng hàm password_hash để mã hóa mật khẩu
-    $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-
-    return $hashedPassword;
-}
-
 // Hàm thêm tài khoản mới
 function addAccount($xmlFilePath, $username, $password, $accountType) {
     $xml = simplexml_load_file($xmlFilePath);
@@ -33,7 +25,7 @@ function addAccount($xmlFilePath, $username, $password, $accountType) {
 
     $newAccount = $xml->addChild('taikhoan');
     $newAccount->addAttribute('tentaikhoan', $username);
-    $newAccount->addChild('matkhau', $password);
+    $newAccount->addChild('matkhau', md5($password));
     $newAccount->addChild('loaitaikhoan', $accountType);
 
     $xml->asXML($xmlFilePath);
@@ -48,7 +40,7 @@ function updateAccount($xmlFilePath, $username, $newPassword, $newAccountType) {
     foreach ($xml->taikhoan as $account) {
         if ((string)$account['tentaikhoan'] === $username) {
             // Cập nhật mật khẩu và loại tài khoản
-            $account->matkhau = $newPassword;//$hashpass;
+            $account->matkhau = md5($newPassword);//$hashpass;
             $account->loaitaikhoan = $newAccountType;
 
             // Lưu thay đổi vào tệp XML

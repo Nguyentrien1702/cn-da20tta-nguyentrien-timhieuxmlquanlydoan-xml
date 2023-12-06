@@ -79,7 +79,7 @@ if(isset($_POST["sbmthem"])){
     $manganh = $_POST["txtmanganh"];
 
     if(isLopExists($xmlFilePath, $malop)){
-        myAlert("Mã ngành đã tồn tại","../../Giaodien/Admin/Them_lop.php?malop=$malop&tenlop=$tenlop&khoa=$khoa&manganh=$manganh");
+        myAlert("Mã ngành đã tồn tại","../../Giaodien/Admin/lop.php?malop=$malop&tenlop=$tenlop&khoa=$khoa&manganh=$manganh");
     }
     else{
         addLop($xmlFilePath, $malop, $tenlop, $khoa, $manganh);

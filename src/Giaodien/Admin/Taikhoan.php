@@ -64,6 +64,7 @@
                 $xml = simplexml_load_file($xmlFilePath);
                 $i = 1;
                 foreach ($xml->taikhoan as $taikhoan) {
+                    if($taikhoan->loaitaikhoan != "Admin"){
                     echo "<tr>";
                     echo "<td>". $i++."</td>";
                     echo "<td>{$taikhoan['tentaikhoan']}</td>";
@@ -71,6 +72,7 @@
                     echo "<td>{$taikhoan->loaitaikhoan}</td>";
                     echo "<td style='text-align: center;'><a href='reset.php?username={$taikhoan['tentaikhoan']}'>Reset</a></td>";
                     echo "</tr>";
+                    }
                 }
             ?>
         </tbody>

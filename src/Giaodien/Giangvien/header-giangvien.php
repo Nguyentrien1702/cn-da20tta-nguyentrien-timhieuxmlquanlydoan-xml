@@ -10,9 +10,12 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
 <style>
-    body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+    body,h1,h2,h3,h4,h5,h6 {font-family: Arial, sans-serif;}
     a {
         text-decoration: none;
+    }
+    footer{
+      margin-top: 20%;
     }
 
 </style>
@@ -26,17 +29,17 @@
 <!-- Sidebar/menu -->
 <nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3; width:300px;" id="mySidebar"><br>
   <div class="w3-container">
-    <img src="#" style="width:45%;" class="w3-round"><br><br>
+    <img src="../../images/avatar.png" style="width:45%;" class="w3-round"><br><br>
     <h5><b style="color: black; text-decoration:none">Tên người dùng</b></h5>
   </div>
   <div class="w3-bar-block">
-    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user w3-margin-right"></i>Thông tin cá nhân</a> 
-    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-arrow-right w3-margin-right"></i>Quản lý đề tài</a>
+    <a href="thongtincanhan.php" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user w3-margin-right"></i>Thông tin cá nhân</a> 
+    <a href="detai.php" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-arrow-right w3-margin-right"></i>Quản lý đề tài</a>
     <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-lock w3-margin-right"></i>Đổi mật khẩu</a> 
     <?php
     session_start();
     if($_SESSION["tennguoidung"] != null)
-      echo ("<a href='../../index.php' onclick='w3_close()' class='w3-bar-item w3-button w3-padding'><i class='fa fa-remove w3-margin-right'></i>Chào: " . $_SESSION["tennguoidung"]." (Thoát)</a>");
+      echo ("<a href='../../Xuly/Xuly_thoat.php' onclick='w3_close()' class='w3-bar-item w3-button w3-padding'><i class='fa fa-remove w3-margin-right'></i>Chào: " . $_SESSION["tennguoidung"]." (Thoát)</a>");
     ?>
   </div>
 </nav>

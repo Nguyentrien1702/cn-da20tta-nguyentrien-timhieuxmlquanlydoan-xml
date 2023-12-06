@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dstaikhoan>
-    <taikhoan tentaikhoan="Admin">
-        <matkhau>admin</matkhau>
-        <loaitaikhoan>Admin</loaitaikhoan>
-    </taikhoan>
-    <taikhoan tentaikhoan="110120081">
-        <matkhau>123</matkhau>
-        <loaitaikhoan>Sinhvien</loaitaikhoan>
-    </taikhoan>
-    <taikhoan tentaikhoan="00246">
-        <matkhau>1234</matkhau>
-        <loaitaikhoan>Giangvien</loaitaikhoan>
-    </taikhoan>
+  <taikhoan tentaikhoan="Admin">
+    <matkhau>21232f297a57a5a743894a0e4a801fc3</matkhau>
+    <loaitaikhoan>Admin</loaitaikhoan>
+  </taikhoan>
+  <taikhoan tentaikhoan="110120081">
+    <matkhau>202cb962ac59075b964b07152d234b70</matkhau>
+    <loaitaikhoan>Sinhvien</loaitaikhoan>
+  </taikhoan>
+  <taikhoan tentaikhoan="00246">
+    <matkhau>202cb962ac59075b964b07152d234b70</matkhau>
+    <loaitaikhoan>Giangvien</loaitaikhoan>
+  </taikhoan>
+  
 </dstaikhoan>

@@ -7,7 +7,7 @@ function kiemTraDangNhap($username, $password) {
     $xml = simplexml_load_file('../QuanlyXML/Taikhoan.xml');
     foreach ($xml->taikhoan as $taikhoan) {
         if ((string) $taikhoan['tentaikhoan'] === $username) {
-            if (/*password_verify( $password, (string) $taikhoan->matkhau)*/$password = (string) $taikhoan->matkhau){
+            if (/*password_verify( $password, (string) $taikhoan->matkhau)*/ (string) $taikhoan->matkhau=== md5($password)){
                 $_SESSION["allow"] = true;
                 return (string) $taikhoan->loaitaikhoan;
             } else {
@@ -21,6 +21,7 @@ function kiemTraDangNhap($username, $password) {
 if (isset($_POST['sbDangnhap'])) {
     $username = $_POST['txtTentaikhoan'];
     $password = $_POST['txtMatkhau'];
+    $_SESSION["user"] = $username;
 
     $result = kiemTraDangNhap($username, $password);
 
@@ -30,14 +31,42 @@ if (isset($_POST['sbDangnhap'])) {
         $_SESSION["tennguoidung"] = "admin";
         exit;
     } elseif ($result === "Sinhvien") {
+        $xml = simplexml_load_file("../QuanlyXML/Sinhvien.xml");
+
+        foreach ($xml->sinhvien as $sinhvien) {
+            if ((string)$sinhvien['mssv'] === $username) {
+                // Cập nhật Giảng viên
+                $tensinhvien = $sinhvien->tensinhvien;
+                break;
+            }
+        }
+        // Tách tên thành mảng các từ
+        $mang_ten = explode(" ", $tensinhvien);
+
+        // Lấy phần cuối (họ cuối)
+        $ho_cuoi = end($mang_ten);
         // Đăng nhập thành công cho tài khoản Sinhvien
         header("Location: ../Giaodien/Sinhvien/index_sinhvien.php");
-        $_SESSION["tennguoidung"] = "Sinh viên";
+        $_SESSION["tennguoidung"] = $ho_cuoi;
         exit;
         } elseif ($result === "Giangvien") {
+            $xml = simplexml_load_file("../QuanlyXML/Giangvien.xml");
+
+            foreach ($xml->giangvien as $giangvien) {
+                if ((string)$giangvien['msgv'] === $username) {
+                    // Cập nhật Giảng viên
+                    $tengiangvien = $giangvien->tengiangvien;
+                    break;
+                }
+            }
+            // Tách tên thành mảng các từ
+            $mang_ten = explode(" ", $tengiangvien);
+
+            // Lấy phần cuối (họ cuối)
+            $ho_cuoi = end($mang_ten);
             // Đăng nhập thành công cho tài khoản Giangvien
             header("Location: ../Giaodien/Giangvien/index_giangvien.php");
-            $_SESSION["tennguoidung"] = "Giảng viên";
+            $_SESSION["tennguoidung"] = $ho_cuoi;
             exit;
             } else {
                 // Đăng nhập thất bại

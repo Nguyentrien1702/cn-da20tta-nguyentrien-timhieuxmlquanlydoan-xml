@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dsloaidoan>
-    <loaidoan maloaidoan = "CN-TT">
-        <tenloai>Đồ án chuyên ngành</tenloai>
-        <manganh>TT</manganh>
-    </loaidoan>
-    <loaidoan maloaidoan = "CSN-TT">
-        <tenloai>Đồ án cơ sở ngành</tenloai>
-        <manganh>TT</manganh>
-    </loaidoan>
-    <loaidoan maloaidoan = "TT-TT">
-        <tenloai>Thực tập</tenloai>
-        <manganh>TT</manganh>
-    </loaidoan>
+  <loaidoan maloaidoan="CN-TT">
+    <tenloai>Đồ án chuyên ngành</tenloai>
+    <manganh>TT</manganh>
+  </loaidoan>
+  <loaidoan maloaidoan="CSN-TT">
+    <tenloai>Đồ án cơ sở ngành</tenloai>
+    <manganh>TT</manganh>
+  </loaidoan>
+  <loaidoan maloaidoan="TT-TT">
+    <tenloai>Thực tập</tenloai>
+    <manganh>TT</manganh>
+  </loaidoan>
 </dsloaidoan>

@@ -2,34 +2,28 @@
 <dsdetai>
     <detai madetai = "CN-TT-01">
         <tendetai>Ứng dụng AI để tạo hồ sơ minh chứng điện tử cho giảng viên từ bản giấy</tendetai>
-        <mota>
-            - Nghiên cứu các thư viện OCR với Python
+        <mota>- Nghiên cứu các thư viện OCR với Python
             - Tạo công cụ import ảnh của tài liệu và nhận dạng tên của cán bộ có trong tài liệu
             - Đưa tài liệu vào cơ sở dữ liệu và gán cho các cán bộ có tên trong danh sách
         </mota>
         <trangthaixetduyet>0</trangthaixetduyet>
-        <trangthaidangky>0</trangthaidangky>
-        <maloaidoan>CN-TT</maloaidoan>
-        <mahk-nk>HK1-2023-2024</mahk-nk>
+        <maloaidoan>CSN-TT</maloaidoan>
         <msgv>00248</msgv>
         <manganh>TT</manganh>
-        <ngayradetai></ngayradetai>
+        <namhoc>2022 - 2023</namhoc>
     </detai>
     <detai madetai = "CN-TT-02" >
         <tendetai>Xây dựng Website quản lý đoàn viên Khoa Kỹ thuật và Công nghệ</tendetai>
-        <mota>
-            Xây dựng Website có các chức năng:
+        <mota>Xây dựng Website có các chức năng:
             - Phân quyền đăng nhập
             - Quản lý thông tin đoàn viên
             - Quản lý hoạt động, phong trào của đoàn viên
             - Đánh giá, xếp loại tình hình hoạt động của chi đoàn, đoàn viên
         </mota>
-        <trangthaixetduyet>0</trangthaixetduyet>
-        <trangthaidangky>0</trangthaidangky>
+        <trangthaixetduyet>1</trangthaixetduyet>
         <maloaidoan>CN-TT</maloaidoan>
-        <mahk-nk>HK1-2023-2024</mahk-nk>
-        <msgv>00252</msgv>
+        <msgv>00246</msgv>
         <manganh>TT</manganh>
-        <ngayradetai></ngayradetai>
+        <namhoc>2023 - 2024</namhoc>
     </detai>
 </dsdetai>

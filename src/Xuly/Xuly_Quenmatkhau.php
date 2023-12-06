@@ -6,7 +6,7 @@ function kiemTraDangNhap($username) {
     // Đọc tệp XML
     $xml = simplexml_load_file('../QuanlyXML/Taikhoan.xml');
 
-    foreach ($xml->Taikhoan as $taikhoan) {
+    foreach ($xml->taikhoan as $taikhoan) {
         if ((string) $taikhoan['tentaikhoan'] === $username) {
                 return (string) $taikhoan->loaitaikhoan;
         }
@@ -51,14 +51,14 @@ if (isset($_POST['sbxacnhan'])) {
 
     $result = kiemTraTennguoidung($username, $tennguoidung);
     if ($result === "Sinhvien" || $result === "Giangvien") {
-        //Đăng nhập thành công cho tài khoản Admin
+        
         updateAccount($xmlFilePath, $username, $pass, $result);
         echo ("<script language='javascript'>
                 alert('Đổi mật khẩu thành công');
                 window.location.assign('../index.php');
             </script>");
     } else {
-        header("Location: ../Giaodien/Quenmatkhau.php?tentaikhoan=" . urlencode($username). "&p=" . urlencode($result));
+        header("Location: ../Giaodien/Quenmatkhau.php?tentaikhoan=".urlencode($username)."&p=".urlencode($result));
         exit;
     }
 }

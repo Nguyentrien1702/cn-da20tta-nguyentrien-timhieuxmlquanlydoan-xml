@@ -21,7 +21,7 @@ function addLoaidoan($xmlFilePath, $maloaidoan, $tenloaidoan, $manganh) {
 
     $newLoaidoan = $xml->addChild('loaidoan');
     $newLoaidoan->addAttribute('maloaidoan', $maloaidoan);
-    $newLoaidoan->addChild('tenloaidoan', $tenloaidoan);
+    $newLoaidoan->addChild('tenloai', $tenloaidoan);
     $newLoaidoan->addChild('manganh', $manganh);
 
     // Định dạng xuống dòng và thụt đầu dòng
@@ -71,12 +71,25 @@ function myAlert($msg, $url){
 
 if(isset($_POST["sbmthem"])){
 
-    $maloaidoan = $_POST["txtmaloaidoan"];
-    $tenloaidoan = $_POST["txttenloaidoan"];
+    $loaidoan = $_POST["txtloaidoan"];
+    $tenloaidoan = "";
+    switch ($loaidoan) {
+        case "CSN":
+            $tenloaidoan = "Đồ án cơ sở ngành";
+            break;
+        case "CN":
+            $tenloaidoan = "Đồ án chuyên ngành";
+            break;
+        case "TT":
+            $tenloaidoan = "Thực tập";
+            break;
+        // Thêm các trường hợp khác nếu cần
+    }
     $manganh = $_POST["txtmanganh"];
+    $maloaidoan = $loaidoan . "-" . $manganh;
 
     if(isLoaidoanExists($xmlFilePath, $maloaidoan)){
-        myAlert("Mã ngành đã tồn tại","../../Giaodien/Admin/Them_loaidoan.php?maloaidoan=$maloaidoan&tenloaidoan=$tenloaidoan&manganh=$manganh");
+        myAlert("Mã ngành đã tồn tại","../../Giaodien/Admin/loaidoan.php?maloaidoan=$loaidoan&manganh=$manganh");
     }
     else{
         addLoaidoan($xmlFilePath, $maloaidoan, $tenloaidoan, $manganh);
