@@ -2,7 +2,7 @@
 require '../vendor/autoload.php'; // Đường dẫn đến autoload.php của Composer
 
 // Đường dẫn đến tài liệu XML
-$xmlFilePath = '../QuanlyXML/Taikhoan.xml';
+$xmlFilePath = '../../QuanlyXML/Taikhoan.xml';
 
 // Hàm kiểm tra xem tài khoản có tồn tại hay không
 function isAccountExists($xmlFilePath, $username) {
@@ -34,6 +34,7 @@ function addAccount($xmlFilePath, $username, $password, $accountType) {
 
 // Hàm cập nhật thông tin tài khoản
 function updateAccount($xmlFilePath, $username, $newPassword, $newAccountType) {
+    $xmlFilePath = '../../QuanlyXML/Taikhoan.xml';
     $xml = simplexml_load_file($xmlFilePath);
     // $hashpass = hashPassword($newPassword, PASSWORD_DEFAULT);
     // Tìm và cập nhật thông tin tài khoản

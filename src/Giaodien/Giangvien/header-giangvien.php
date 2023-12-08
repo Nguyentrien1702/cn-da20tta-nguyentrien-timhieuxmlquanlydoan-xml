@@ -33,9 +33,10 @@
     <h5><b style="color: black; text-decoration:none">Tên người dùng</b></h5>
   </div>
   <div class="w3-bar-block">
+  <a href="index_giangvien.php" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="glyphicon glyphicon-home w3-margin-right"></i>Trang chủ</a> 
     <a href="thongtincanhan.php" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user w3-margin-right"></i>Thông tin cá nhân</a> 
     <a href="detai.php" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-arrow-right w3-margin-right"></i>Quản lý đề tài</a>
-    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-lock w3-margin-right"></i>Đổi mật khẩu</a> 
+    <a href="doimatkhau.php" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-lock w3-margin-right"></i>Đổi mật khẩu</a> 
     <?php
     session_start();
     if($_SESSION["tennguoidung"] != null)

@@ -41,8 +41,9 @@
 .nhapexcel:hover {
     background-color: blue !important;
 }
-.w3-content{
-    margin-left: 100px;
+#div-content{
+    width: 80%;
+    margin: auto;
 }
 
 </style>
@@ -80,11 +81,11 @@
 
             }
     ?>
-<div class="w3-content">
+<div id="div-content">
 
     <!-- Form thêm giảng viên -->
     <div id="form" class="form-them-sua" style="display: none;">
-        <h2 class="w3-container w3-red">Thêm Giảng Viên Mới</h2>
+        <h2 class="w3-container w3-blue">Thêm Giảng Viên Mới</h2>
 
         <form class="w3-container" action="../../Xuly/Xuly_XML/Xuly_giangvien.php" method="post">
             <label for="msgv">Mã Số Giảng Viên:</label>
@@ -112,14 +113,14 @@
             <input class="w3-input w3-border" type="text" id="phong" name="txtphong" value="<?php echo $phong; ?>">
 
             <button class='w3-btn w3-green' type='submit' name='sbmthem'>Thêm</button>
-            <button class="w3-btn w3-red" type="submit" name="sbmhuy"
+            <button class="w3-btn w3-blue" type="submit" name="sbmhuy"
                 onclick="window.location.href='../../Giaodien/Admin/giangvien.php'">Hủy</button>
         </form>
     </div>
 
     <!-- Form sửa giảng viên -->
     <div id="form_sua" class="form-them-sua" style="display: none;">
-        <h2 class="w3-container w3-red">Sửa Giảng Viên Mới</h2>
+        <h2 class="w3-container w3-blue">Sửa Giảng Viên Mới</h2>
 
         <form class="w3-container" action="../../Xuly/Xuly_XML/Xuly_giangvien.php" method="post">
             <label for="msgv">Mã Số Giảng Viên:</label>
@@ -147,7 +148,7 @@
             <input class="w3-input w3-border" type="text" id="phong" name="txtphong" value="<?php echo $phong; ?>">
 
             <button class='w3-btn w3-green' type='submit' name='sbmcapnhat'>Cập nhật</button>
-            <button class="w3-btn w3-red" type="submit" name="sbmhuy"
+            <button class="w3-btn w3-blue" type="submit" name="sbmhuy"
                 onclick="window.location.href='../../Giaodien/Admin/giangvien.php'">Hủy</button>
         </form>
     </div>
@@ -166,7 +167,7 @@
                     <br>
                     <br>
                     <button type="submit" class="w3-button w3-green nhapexcel" name="nhap_excel">Tải lên</button>
-                    <button type="button" onclick="closeModal()" class="w3-button w3-red nhapexcel">Hủy</button>
+                    <button type="button" onclick="closeModal()" class="w3-button w3-blue nhapexcel">Hủy</button>
                 </form>
             </div>
         </div>
@@ -177,7 +178,7 @@
     <button id="themmoi" class="w3-button w3-green" onclick="toggleForm()">Thêm mới</button>
     <button id="nhapexcel" onclick="openModal()" class="w3-button w3-green nhapexcel">Nhập File</button>
     <div class="custom-datatable-style">
-    <table id="accountTable" class="w3-table w3-bordered w3-striped display" style="width: 130%; margin-top: 10px;">
+    <table id="accountTable" class="w3-table w3-bordered w3-striped display" style="width: 100%; margin-top: 10px;">
         <thead>
             <tr>
                 <th class="table-header">STT</th>

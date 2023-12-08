@@ -69,6 +69,15 @@ function deleteGiangvien($xmlFilePath, $msgv) {
     $xml->asXML($xmlFilePath);
     
 }
+// Hàm xóa tài khoản
+function deleteAccount( $username) {
+    $xmlFilePath = '../../QuanlyXML/Taikhoan.xml';
+    $xml = simplexml_load_file($xmlFilePath);
+    $account = $xml->xpath("//taikhoan[@tentaikhoan='$username']");
+    unset($account[0][0]);
+
+    $xml->asXML($xmlFilePath);
+}
 
 function myAlert($msg, $url){
     echo '<script language="javascript">alert("'.$msg.'");</script>';
@@ -107,8 +116,9 @@ if(isset($_POST["sbmcapnhat"])){
 }
 if(isset($_GET["msgv"])){
         $ma = $_GET["msgv"];
+        deleteAccount($ma);
         deleteGiangvien($xmlFilePath, $ma);
-        myAlert("Xóa thành công","../../Giaodien/Admin/giangvien.php");
+        header("Location: ../../Giaodien/Admin/giangvien.php");
     }
 
 ?>

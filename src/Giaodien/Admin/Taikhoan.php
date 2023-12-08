@@ -42,6 +42,17 @@
             font-weight: bold;
             color: red;
         }
+        .reset{
+            padding: 7px;
+            text-decoration: none;
+            background-color: #6495ED;
+            border-radius: 5px;
+            color: white;
+        }
+        .reset:hover{
+            background-color: green;
+            font-size: 17px;
+        }
     </style>
 
 
@@ -70,7 +81,7 @@
                     echo "<td>{$taikhoan['tentaikhoan']}</td>";
                     echo "<td>{$taikhoan->matkhau}</td>";
                     echo "<td>{$taikhoan->loaitaikhoan}</td>";
-                    echo "<td style='text-align: center;'><a href='reset.php?username={$taikhoan['tentaikhoan']}'>Reset</a></td>";
+                    echo "<td style='text-align: center;'><a href='../../Xuly/Xulu_XML/reset_matkhau.php?username={$taikhoan['tentaikhoan']}' class='reset'>Reset</a></td>";
                     echo "</tr>";
                     }
                 }

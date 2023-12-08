@@ -36,7 +36,7 @@
           <a href="sinhvien.php" class="w3-bar-item w3-button">Quản lý sinh viên</a>
         </div>
       </div>
-      <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Quản lý đề tài</a>
+      <a href="detai.php" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Quản lý đề tài</a>
       <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Quản lý đăng ký</a>
       <div class="w3-dropdown-hover w3-hide-small">
         <button class="w3-padding-large w3-button" title="More">Quản lý khác <i class="fa fa-caret-down"></i></button>  
@@ -45,6 +45,7 @@
           <a href="lop.php" class="w3-bar-item w3-button">Quản lý lớp</a>
           <a href="hocky.php" class="w3-bar-item w3-button">Quản lý học kỳ</a>
           <a href="loaidoan.php" class="w3-bar-item w3-button">Quản lý loại đồ án</a>
+          <a href="loaidetai.php" class="w3-bar-item w3-button">Quản lý loại đề tài</a>
           <a href="Taikhoan.php" class="w3-bar-item w3-button">Quản lý tài khoản</a>
         </div>
       </div>

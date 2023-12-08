@@ -30,7 +30,7 @@
     <a href="index_sinhvien.php" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user w3-margin-right"></i>Thông tin cá nhân</a>
     <a href="dsgiangvien.php" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-table w3-margin-right"></i>Danh sách giảng viên</a>  
     <a href="dangkydoan.php" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-arrow-right w3-margin-right"></i>Đăng ký đồ án</a>
-    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-lock w3-margin-right"></i>Đổi mật khẩu</a> 
+    <a href="doimatkhau.php" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-lock w3-margin-right"></i>Đổi mật khẩu</a> 
     <?php
     session_start();
     if($_SESSION["tennguoidung"] != null)

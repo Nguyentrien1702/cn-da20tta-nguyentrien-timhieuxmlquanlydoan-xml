@@ -6,6 +6,25 @@ use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 use PhpOffice\PhpSpreadsheet\Style\Alignment;
 
+// Hàm thêm tài khoản mới
+function addAccount( $username, $password, $accountType) {
+    $xmlFilePath = '../../QuanlyXML/Taikhoan.xml';
+    $xml = simplexml_load_file($xmlFilePath);
+
+    $newAccount = $xml->addChild('taikhoan');
+    $newAccount->addAttribute('tentaikhoan', $username);
+    $newAccount->addChild('matkhau', md5($password));
+    $newAccount->addChild('loaitaikhoan', $accountType);
+
+    // Định dạng xuống dòng và thụt đầu dòng
+    $dom = new DOMDocument('1.0');
+    $dom->preserveWhiteSpace = false;
+    $dom->formatOutput = true;
+    $dom->loadXML($xml->asXML());
+
+    // Lưu thay đổi vào tệp XML
+    $dom->save($xmlFilePath);
+}
 function addDataFromExcelToXml($excelFile) {
     $xmlFile = '../../QuanlyXML/Giangvien.xml';
 
@@ -52,6 +71,9 @@ function addDataFromExcelToXml($excelFile) {
                 $newGiangvien->addChild('sodienthoai', $sodienthoai);
                 $newGiangvien->addChild('email', $email);
                 $newGiangvien->addChild('phong', $phong);
+                
+                $matkhau = $msgv."@";
+                addAccount($msgv, $matkhau, "Giangvien");
 
                 // Thêm phần tử 'nganh' vào gốc
                 $dom = dom_import_simplexml($xml)->ownerDocument;

@@ -31,11 +31,7 @@
     .btnthem:hover {
     background-color: blue !important;
     }
-    .mota{
-        width: 20%;
-        white-space: pre-line;
-        margin-top: 0px;
-    }
+
     #stt{
         width: 20px;
     }
@@ -45,7 +41,43 @@
     th{
         text-align: center !important;
     }
+    td, th{
+    
+    vertical-align: middle !important;
+    }
+    .mota {
+    width: 20%;
+    white-space: pre-line;
+    margin-top: 0px;
+    }
 </style>
+<div class="w3-content">
+<!-- Form thêm đề tài -->
+<div id="form" class="form-them-sua" style="display: block;">
+    <h2 class="w3-container w3-red">Thêm Đề Tài Mới</h2>
+
+    <form class="w3-container" action="../../Xuly/Xuly_XML/Xuly_formdetai.php" method="post">
+        <label for="tendetai">Tên Đề Tài:</label>
+        <input class="w3-input w3-border" type="text" id="tendetai" name="txttendetai" required>
+
+        <label for="mota">Mô Tả:</label>
+        <textarea class="w3-input w3-border" id="mota" name="txtmota" style="resize: none;" rows="4" required></textarea>
+
+        <label for="maloaidoan">Mã Loại Đoàn:</label>
+        <select class="w3-select w3-border" id="maloaidoan" name="txtmaloaidoan" required>
+            <!-- Thêm các option từ XML hoặc cơ sở dữ liệu nếu có -->
+            <option value="CSN-TT">CSN-TT</option>
+            <option value="CN-TT">CN-TT</option>
+            <!-- Thêm các option khác nếu cần -->
+        </select>
+
+        <button class='w3-btn w3-green' type='submit' name='sbmthem'>Thêm</button>
+        <button class="w3-btn w3-red" type="submit" name="sbmhuy"
+            onclick="window.location.href='../../Giaodien/Admin/detai.php'">Hủy</button>
+    </form>
+</div>
+</div>
+
 <div id="div1">
 <h1>Danh sách đề tài</h1>
 
@@ -116,6 +148,9 @@
                             <a id='sua' href='#'>Sửa</a>
                             <a onclick=\"return confirm('Bạn có thật sự muốn xóa đề tài này hay không?')\" id='xoa' href='#'>Xóa</a>
                           </td>";}
+                          else{
+                            echo "<td></td>";
+                          }
                     echo "</tr>";
                 }
                 ?>

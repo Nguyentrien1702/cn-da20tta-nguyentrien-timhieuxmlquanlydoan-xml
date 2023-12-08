@@ -1,6 +1,65 @@
 <?php
   include("header-admin.php")
 ?>
+<style>
+.div-content {
+    width: 95%;
+    margin: auto;
+}
+
+h1 {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+.mota {
+    width: 20%;
+    white-space: pre-line;
+    margin-top: 0px;
+}
+
+.tick-symbol,
+.cross-symbol {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.tick-symbol,.cross-symbol{
+    text-decoration: none;
+    padding: 7px;
+    font-size: 20px;
+    font-weight: bolder;
+    border-radius: 5px;
+}
+.tick-symbol{
+    background-color: cadetblue;
+}
+
+.cross-symbol{
+    background-color: cadetblue;
+}
+/* Dấu tick khi nút được hover */
+.tick-symbol:hover {
+    font-size: 30px;
+    color: green;
+    /* Màu sắc khi hover */
+}
+
+/* Dấu x khi nút được hover */
+.cross-symbol:hover {
+    font-size: 30px;
+    color: red;
+    /* Màu sắc khi hover */
+}
+th{
+    text-align: center;
+}
+td, th{
+    
+    vertical-align: middle !important;
+}
+</style>
 <?php
 $xmlFilePath1 = '../../QuanlyXML/Nganh.xml';
 $xml1 = simplexml_load_file($xmlFilePath1);
@@ -33,7 +92,7 @@ $xml1 = simplexml_load_file($xmlFilePath1);
 ?>
 
 <div>
-    <button id="themmoi" class="w3-button w3-green" onclick="openModal()" style="margin: 20px 20px;">Tạo thời
+    <button id="themmoi" class="w3-button w3-green" onclick="openModal()" style="margin: 20px 40px;">Tạo thời
         gian</button>
     <div id="uploadModal" class="w3-modal">
         <div class="w3-modal-content w3-animate-zoom" style="width: 400px;">
@@ -84,8 +143,8 @@ $xml1 = simplexml_load_file($xmlFilePath1);
                     </select>
 
                     <label class="w3-text">Ngày bắt đầu:</label>
-                    <input class="w3-input w3-border w3-datepicker" min="<?php echo date('Y-m-d'); ?>" type="date" id="ngaybd" name="ngaybd"
-                        placeholder="Chọn ngày"  required>
+                    <input class="w3-input w3-border w3-datepicker" min="<?php echo date('Y-m-d'); ?>" type="date"
+                        id="ngaybd" name="ngaybd" placeholder="Chọn ngày" required>
 
                     <label class="w3-text">Ngày kết thúc:</label>
                     <input class="w3-input w3-border w3-datepicker" type="date" id="ngaykt" name="ngaykt"
@@ -99,13 +158,14 @@ $xml1 = simplexml_load_file($xmlFilePath1);
     </div>
 </div>
 
-<div class="custom-datatable-style">
+<div class="div-content">
+    <h1>Các hoạt động</h1>
     <table id="accountTable" class="w3-table w3-bordered w3-striped display" style="width: 100%; margin-top: 10px;">
         <thead>
             <tr>
                 <th class="table-header">STT</th>
                 <th class="table-header">Công việc</th>
-                <th class="table-header" >Người thực hiện</th>
+                <th class="table-header">Người thực hiện</th>
                 <th class="table-header">Loại đồ án</th>
                 <th class="table-header">Ngành</th>
                 <th class="table-header">Năm học</th>
@@ -173,6 +233,88 @@ $xml1 = simplexml_load_file($xmlFilePath1);
     </table>
 </div>
 
+
+<?php
+    function trangthai(){
+        $xmlFilePath = '../../QuanlyXML/Detai.xml';
+        $xml = simplexml_load_file($xmlFilePath);
+        foreach ($xml->detai as $detai) {
+            if($detai->trangthaixetduyet == 0){
+                return 1;
+            }
+        }
+    }
+    if(trangthai() == 1){
+       echo "<hr style='border: 2px solid black; margin: 40px'>";
+?>
+<div class="div-content">
+    <h1>Danh sách đề tài chờ xét duyệt</h1>
+    <table id="accountTable" class="w3-table w3-bordered w3-striped display" style="width: 100%; margin-top: 10px;">
+        <thead>
+            <tr>
+                <th class="table-header">STT</th>
+                <th class="table-header">Tên đề tài</th>
+                <th class="table-header">Mô tả</th>
+                <th class="table-header">Loại đồ án</th>
+                <th class="table-header">Ngành</th>
+                <th class="table-header">Năm học</th>
+                <th class="table-header">Giảng viên ra đề tài</th>
+                <th class="table-header">Thao tác</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+                    $xmlFilePath = '../../QuanlyXML/Detai.xml';
+                    $xml = simplexml_load_file($xmlFilePath);
+                    $xmlFilePath_loaidoan = '../../QuanlyXML/Loaidoan.xml';
+                    $xml_loaidoan = simplexml_load_file($xmlFilePath_loaidoan);
+                    $xmlFilePath_nganh = '../../QuanlyXML/Nganh.xml';
+                    $xml_nganh = simplexml_load_file($xmlFilePath_nganh);
+                    $xmlFilePath_giangvien = '../../QuanlyXML/Giangvien.xml';
+                    $xml_giangvien = simplexml_load_file($xmlFilePath_giangvien);
+                    $i = 1;
+
+                    foreach ($xml->detai as $detai) {
+                        if($detai->trangthaixetduyet == 0){
+                        echo "<tr>";
+                        echo "<td>". $i++ ."</td>";
+                        echo "<td class='mota'>{$detai->tendetai}</td>";
+                        echo "<td class='mota'>{$detai->mota}</td>";
+                        foreach ($xml_loaidoan->loaidoan as $loaidoan) {
+                            if((string)$loaidoan['maloaidoan'] == (string)$detai->maloaidoan){
+                              echo "<td>".$loaidoan->tenloai."</td>";
+                              break;
+                            }
+                          }
+
+                        foreach ($xml_nganh->nganh as $nganh) {
+                            if((string)$nganh['manganh'] == (string)$detai->manganh){
+                              echo "<td>".$nganh->tennganh."</td>";
+                              break;
+                            }
+                        }
+
+                        echo "<td>{$detai->namhoc}</td>";
+                        foreach ($xml_giangvien->giangvien as $giangvien) {
+                            if((string)$giangvien['msgv'] == (string)$detai->msgv){
+                              echo "<td>".$giangvien->tengiangvien."</td>";
+                              break;
+                            }
+                        }
+                        echo "<td style='text-align: center;'>
+                            <a id='duyet' href='../../Xuly/Xuly_XML/Xuly_duyetdetai.php?duyet_madetai={$detai['madetai']}' class='tick-symbol'>&#10003;</a>
+                            <a onclick=\"return confirm('Bạn có thật sự muốn xóa đề tài này hay không?')\" id='loaibo' class='cross-symbol' href='../../Xuly/Xuly_XML/Xuly_duyetdetai?loaibo_madetai={$detai['madetai']}'>&#10007;</a>
+                          </td>";
+                        echo "</tr>";}
+                    }
+            ?>
+        </tbody>
+    </table>
+</div>
+<?php
+    }
+?>
+
 <script>
 function openModal() {
     uploadButtonClicked = true;
@@ -188,7 +330,6 @@ document.getElementById('ngaybd').addEventListener('change', function() {
     var ngaybdValue = this.value;
     document.getElementById('ngaykt').min = ngaybdValue;
 });
-
 </script>
 <?php
   include("footer-admin.php")
