@@ -8,8 +8,8 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/them-sua.css">
+<!--<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/them-sua.css">-->
 <style>
 .custom-datatable-style #accountTable_wrapper {
     width: 100%;
@@ -41,8 +41,14 @@
 .nhapexcel:hover {
     background-color: blue !important;
 }
-.w3-content{
-    margin-left: 100px;
+#div-content{
+    width: 80%;
+    margin: auto;
+}
+h1#td{
+    text-transform:uppercase;
+    font-weight: bolder;
+    color:blue;
 }
 
 </style>
@@ -82,11 +88,11 @@
 
             }
     ?>
-<div class="w3-content">
+<div id="div-content">
 
     <!-- Form thêm Sinh viên -->
     <div id="form" class="form-them-sua" style="display: none;">
-        <h2 class="w3-container w3-red">Thêm Sinh Viên Mới</h2>
+        <h2 class="w3-container">Thêm Sinh Viên Mới</h2>
 
         <form class="w3-container" action="../../Xuly/Xuly_XML/Xuly_sinhvien.php" method="post">
             <label for="mssv">Mã Số Sinh Viên:</label>
@@ -138,7 +144,7 @@
 
     <!-- Form sửa Sinh viên -->
     <div id="form_sua" class="form-them-sua" style="display: none;">
-        <h2 class="w3-container w3-red">Sửa Sinh Viên Mới</h2>
+        <h2 class="w3-container">Sửa Sinh Viên Mới</h2>
 
         <form class="w3-container" action="../../Xuly/Xuly_XML/Xuly_sinhvien.php" method="post">
             <label for="mssv">Mã Số Sinh Viên:</label>
@@ -209,12 +215,12 @@
         </div>
     </div>
 
-    <h1>Danh sách Sinh viên</h1>
+    <h1 id = "td">Danh sách Sinh viên</h1>
 
     <button id="themmoi" class="w3-button w3-green" onclick="toggleForm()">Thêm mới</button>
     <button id="nhapexcel" onclick="openModal()" class="w3-button w3-green nhapexcel">Nhập File</button>
     <div class="custom-datatable-style">
-    <table id="accountTable" class="w3-table w3-bordered w3-striped display" style="width: 130%; margin-top: 10px;">
+    <table id="accountTable" class="w3-table w3-bordered w3-striped display" style="width: 100%; margin-top: 10px;">
         <thead>
             <tr>
                 <th class="table-header">STT</th>

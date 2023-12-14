@@ -173,7 +173,7 @@
         </div>
     </div>
 
-    <h1>Danh sách Giảng viên</h1>
+    <h1 style="color: black">Danh sách Giảng viên</h1>
 
     <button id="themmoi" class="w3-button w3-green" onclick="toggleForm()">Thêm mới</button>
     <button id="nhapexcel" onclick="openModal()" class="w3-button w3-green nhapexcel">Nhập File</button>

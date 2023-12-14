@@ -5,7 +5,7 @@
 
 /* Định dạng cho các dòng tiêu đề */
 .table-header {
-    background-color: #333;
+    background-color: #474444;
     color: #fff;
     font-weight: bold;
 }
@@ -32,10 +32,10 @@ div.dataTables_wrapper div.dataTables_filter {
     /* Add some space between the search bar and the table */
 }
 
-h1 {
+h1#td{
     text-align: center;
     font-weight: bold;
-    color: rgb(21, 27, 203);
+    color: rgb(21, 27, 203) !important;
 }
 
 #themmoi {
