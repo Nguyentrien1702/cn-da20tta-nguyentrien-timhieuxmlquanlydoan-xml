@@ -7,14 +7,17 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/them-sua.css">
 <style>
     #div1{
         width: 95%;
         margin: auto;
     }
-    h1{
-        font-weight: bold;
-        color: red;
+    h1#td{
+        text-transform:uppercase;
+        font-weight: bolder;
+        color:blue;
         text-align: center;
     }
     .btnthem{
@@ -38,9 +41,6 @@
     #trangthai{
         width: 5%;
     }
-    th{
-        text-align: center !important;
-    }
     td, th{
     
     vertical-align: middle !important;
@@ -50,52 +50,46 @@
     white-space: pre-line;
     margin-top: 0px;
     }
-</style>
-<div class="w3-content">
-<!-- Form thêm đề tài -->
-<div id="form" class="form-them-sua" style="display: block;">
-    <h2 class="w3-container w3-red">Thêm Đề Tài Mới</h2>
-
-    <form class="w3-container" action="../../Xuly/Xuly_XML/Xuly_formdetai.php" method="post">
-        <label for="tendetai">Tên Đề Tài:</label>
-        <input class="w3-input w3-border" type="text" id="tendetai" name="txttendetai" required>
-
-        <label for="mota">Mô Tả:</label>
-        <textarea class="w3-input w3-border" id="mota" name="txtmota" style="resize: none;" rows="4" required></textarea>
-
-        <label for="maloaidoan">Mã Loại Đoàn:</label>
-        <select class="w3-select w3-border" id="maloaidoan" name="txtmaloaidoan" required>
-            <!-- Thêm các option từ XML hoặc cơ sở dữ liệu nếu có -->
-            <option value="CSN-TT">CSN-TT</option>
-            <option value="CN-TT">CN-TT</option>
-            <!-- Thêm các option khác nếu cần -->
-        </select>
-
-        <button class='w3-btn w3-green' type='submit' name='sbmthem'>Thêm</button>
-        <button class="w3-btn w3-red" type="submit" name="sbmhuy"
-            onclick="window.location.href='../../Giaodien/Admin/detai.php'">Hủy</button>
-    </form>
-</div>
-</div>
+    .ten{
+        text-transform:uppercase;
+        font-weight: bolder;
+        color:blue;
+        text-align: center;
+    }
+    .btn{
+        margin-top: 10px;
+    }
+    .ten{
+        text-transform:uppercase;
+        font-weight: bolder;
+        color:blue;
+        text-align: center;
+    }
+    #xoa, #sua{
+        padding: 5px;
+        background-color: blue;
+        border-radius: 5px;
+        color: white;
+        text-decoration: none;
+    }
+    #xoa:hover, #sua:hover{
+        background-color: green;
+    }
+</style
 
 <div id="div1">
-<h1>Danh sách đề tài</h1>
-
-<button id="themmoi" class="w3-button w3-green btnthem" onclick="toggleForm()">Thêm mới</button>
-<button id="nhapexcel" onclick="openModal()" class="w3-button w3-green btnthem">Nhập File</button>
-    <div class="custom-datatable-style">
+<h1 id="td">Danh sách đề tài</h1>
+    <div class="custom-datatable-style" style="width: 95%; margin: auto;">
         <table id="accountTable" class="w3-table w3-bordered w3-striped display" style="width: 100%; margin-top: 10px;">
             <thead>
                 <tr>
                     <th class="table-header" style="text-align: center;">STT</th>
                     <th class="table-header" style="text-align: center;">Tên đề tài</th>
                     <th class="table-header">Mô tả</th>
-                    <th class="table-header">Trạng thái xét duyệt</th>
                     <th class="table-header">Loại đồ án</th>
-                    <th class="table-header">MSGV</th>
+                    <th class="table-header">Giảng viên ra đề tài</th>
                     <th class="table-header">Mã ngành</th>
                     <th class="table-header">Năm học</th>
-                    <th class="table-header">Thao tác</th>
                 </tr>
             </thead>
             <tbody>
@@ -106,52 +100,49 @@
                 $xml1 = simplexml_load_file($xmlFilePath1);
                 $xmlFilePath2 = '../../QuanlyXML/Nganh.xml';
                 $xml2 = simplexml_load_file($xmlFilePath2);
+                $xmlFilePath3 = '../../QuanlyXML/Loaidoan.xml';
+                $xml3 = simplexml_load_file($xmlFilePath3);
                 $i = 1;
                 foreach ($xml->detai as $detai) {
-                    echo "<tr>";
-                    echo "<td id='stt'>".$i++."</td>";
-                    echo "<td class='mota'>{$detai->tendetai}</td>";
-                    echo "<td class='mota'>" . $detai->mota . "</td>";
-                    echo "<td id='trangthai'>";
-                    if($detai->trangthaixetduyet == 0){
-                        echo "Chưa duyệt";
-                    }else{
-                        echo "Đã duyệt";
-                    }
-                    "</td>";
-                    $manganhParts = explode('-', $detai->maloaidoan);
+                    if($detai->trangthaixetduyet == 1){
+                        echo "<tr>";
+                        echo "<td id='stt'>".$i++."</td>";
+                        echo "<td class='mota'>{$detai->tendetai}</td>";
+                        echo "<td class='mota'>" . $detai->mota . "</td>";
+                        
+                        $manganhParts = explode('-', $detai->maloaidoan);
 
-                    // Lấy phần mã ngành đến trước dấu "-"
-                    $manganhBeforeDash = trim($manganhParts[0]);
-                    $manganhAfterDash = trim($manganhParts[1]);
-                    echo "<td>{$manganhBeforeDash}</td>";
-                    echo "<td>";
-                    foreach ($xml1->giangvien as $giangvien) {
-                        if((String)$detai->msgv == (String)$giangvien['msgv']){
-                            echo "{$giangvien->tengiangvien}";
-                            break;
+                        // Lấy phần mã ngành đến trước dấu "-"
+                        $manganhBeforeDash = trim($manganhParts[0]);
+                        $manganhAfterDash = trim($manganhParts[1]);
+                        echo "<td>";
+                        foreach ($xml3->loaidoan as $loaidoan) {
+                            if((String)$detai->maloaidoan == (String)$loaidoan['maloaidoan']){
+                                echo "{$loaidoan->tenloai}";
+                                break;
+                            }
                         }
-                    }
-                    "</td>";
-                                        
-                    echo "<td>";
-                    foreach ($xml2->nganh as $nganh) {
-                        if((String)$manganhAfterDash == (String)$nganh['manganh']){
-                            echo "{$nganh->tennganh}";
-                            break;
+                        "</td>";
+                        echo "<td>";
+                        foreach ($xml1->giangvien as $giangvien) {
+                            if((String)$detai->msgv == (String)$giangvien['msgv']){
+                                echo "{$giangvien->tengiangvien}";
+                                break;
+                            }
                         }
+                        "</td>";
+                                            
+                        echo "<td>";
+                        foreach ($xml2->nganh as $nganh) {
+                            if((String)$manganhAfterDash == (String)$nganh['manganh']){
+                                echo "{$nganh->tennganh}";
+                                break;
+                            }
+                        }
+                        "</td>";
+                        echo "<td>{$detai->namhoc}</td>";
+                        echo "</tr>";
                     }
-                    "</td>";
-                    echo "<td>{$detai->namhoc}</td>";
-                    if((String)$_SESSION['user'] == (String)$detai->msgv){
-                    echo "<td style='text-align: center;'>
-                            <a id='sua' href='#'>Sửa</a>
-                            <a onclick=\"return confirm('Bạn có thật sự muốn xóa đề tài này hay không?')\" id='xoa' href='#'>Xóa</a>
-                          </td>";}
-                          else{
-                            echo "<td></td>";
-                          }
-                    echo "</tr>";
                 }
                 ?>
             </tbody>

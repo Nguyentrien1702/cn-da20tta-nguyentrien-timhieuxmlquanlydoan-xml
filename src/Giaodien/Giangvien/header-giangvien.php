@@ -15,14 +15,29 @@
         text-decoration: none;
     }
     footer{
-      margin-top: 20%;
+      margin-top: 50%;
+    }
+    a:active {
+      color: black; 
+    }
+
+    a:visited {
+      color: black; 
+    }
+    li {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    li {
+      color: black;
     }
 
 </style>
 </head>
 <body class="w3-light-grey w3-content" style="max-width:100%">
 <!-- Navigation bar with social media icons -->
-<div class="w3-bar w3-gray w3-hide-small">
+<div class="w3-bar w3-blue w3-hide-small">
     <a href="#" class="w3-bar-item"><img width="25px" src="../../images/logotvu.png" alt="logo-tvu">   
 </div>
 
@@ -30,12 +45,22 @@
 <nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3; width:300px;" id="mySidebar"><br>
   <div class="w3-container">
     <img src="../../images/avatar.png" style="width:45%;" class="w3-round"><br><br>
-    <h5><b style="color: black; text-decoration:none">Tên người dùng</b></h5>
   </div>
   <div class="w3-bar-block">
-  <a href="index_giangvien.php" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="glyphicon glyphicon-home w3-margin-right"></i>Trang chủ</a> 
+    <a href="index_giangvien.php" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="glyphicon glyphicon-home w3-margin-right"></i>Trang chủ</a> 
     <a href="thongtincanhan.php" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user w3-margin-right"></i>Thông tin cá nhân</a> 
-    <a href="detai.php" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-arrow-right w3-margin-right"></i>Quản lý đề tài</a>
+    <a href="#" onclick="toggleSubMenu()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-arrow-right w3-margin-right"></i>Quản lý đề tài</a>
+    <ul id="subMenu" style="display: none;">
+      <li><a href="detai.php" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-arrow-right w3-margin-right"></i>Tất cả đề tài</a></li>
+      <li><a href="detaicanhan.php" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-arrow-right w3-margin-right"></i>Đề tài cá nhân</a></li>
+      <!-- Thêm các mục menu con khác nếu cần -->
+    </ul>
+    <a href="#" onclick="toggleSubMenu2()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-arrow-right w3-margin-right"></i>Quản lý đăng ký</a>
+    <ul id="subMenu2" style="display: none;">
+      <li><a href="tatcadsdangky.php" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-arrow-right w3-margin-right"></i>Tất cả</a></li>
+      <li><a href="dscanhan.php" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-arrow-right w3-margin-right"></i>Cá nhân</a></li>
+      <!-- Thêm các mục menu con khác nếu cần -->
+    </ul>
     <a href="doimatkhau.php" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-lock w3-margin-right"></i>Đổi mật khẩu</a> 
     <?php
     session_start();

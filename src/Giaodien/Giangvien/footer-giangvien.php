@@ -18,6 +18,14 @@
         document.getElementById("mySidebar").style.display = "none";
         document.getElementById("myOverlay").style.display = "none";
     }
+    function toggleSubMenu() {
+        var subMenu = document.getElementById("subMenu");
+        subMenu.style.display = (subMenu.style.display === "none") ? "block" : "none";
+    }
+    function toggleSubMenu2() {
+        var subMenu = document.getElementById("subMenu2");
+        subMenu.style.display = (subMenu.style.display === "none") ? "block" : "none";
+    }
 </script>
 </body>
 </html>

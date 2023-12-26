@@ -13,8 +13,7 @@ h2 {
     padding: 20px !important;
     font-size: 40px;
     font-weight: bold;
-    background-color: powderblue;
-    color: red;
+    color: blue;
     text-transform: uppercase;
     margin-bottom: 20px;
 }

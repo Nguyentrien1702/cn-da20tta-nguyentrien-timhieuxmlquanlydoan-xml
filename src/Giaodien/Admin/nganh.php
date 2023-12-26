@@ -30,6 +30,17 @@
     cursor: pointer;
     font-weight: bold;
 }
+h1#td{
+    text-transform:uppercase;
+    font-weight: bolder;
+    color:blue;
+}
+.ten{
+    text-transform:uppercase;
+    font-weight: bolder;
+    color:blue;
+    text-align: center;
+}
 
 .nhapexcel:hover {
     background-color: blue !important;
@@ -63,7 +74,7 @@
 <div class="w3-content">
 
     <div id="form" class="form-them-sua" style="display: none;">
-        <h2 class="w3-container w3-red">Thêm Ngành Mới</h2>
+        <h2 class="w3-container ten">Thêm Ngành Mới</h2>
 
         <form class="w3-container" action="../../Xuly/Xuly_XML/Xuly_nganh.php" method="post">
             <label for="manganh">Mã Ngành:</label>
@@ -75,13 +86,13 @@
                 value="<?php echo $tennganh; ?>" required>
 
             <button class='w3-btn w3-green' type='submit' id="btnThem" name='sbmthem'>Thêm</button>
-            <button class="w3-btn w3-red" type="submit" name="sbmhuy"
+            <button class="w3-btn w3-blue" type="submit" name="sbmhuy"
                 onclick="window.location.href='../../Giaodien/Admin/nganh.php'">Hủy</button>
         </form>
     </div>
 
     <div class="form-them-sua" id="form_sua" style="display: none;">
-        <h2 class="w3-container w3-red">Sửa ngành</h2>
+        <h2 class="w3-container ten">Sửa ngành</h2>
 
         <form class="w3-container" action="../../Xuly/Xuly_XML/Xuly_nganh.php" method="post">
             <label for="manganh">Mã Ngành:</label>
@@ -93,7 +104,7 @@
                 value="<?php echo $tennganh; ?>" required>
 
             <button class='w3-btn w3-green' type='submit' name='sbmcapnhat'>Cập nhật</button>
-            <button class="w3-btn w3-red" type="submit" name="sbmhuy"
+            <button class="w3-btn w3-blue" type="submit" name="sbmhuy"
                 onclick="window.location.href='../../Giaodien/Admin/nganh.php'">Hủy</button>
         </form>
     </div>
@@ -111,13 +122,13 @@
                     <br>
                     <br>
                     <button type="submit" class="w3-button w3-green nhapexcel" name="nhap_excel">Tải lên</button>
-                    <button type="button" onclick="closeModal()" class="w3-button w3-red nhapexcel">Hủy</button>
+                    <button type="button" onclick="closeModal()" class="w3-button w3-blue nhapexcel">Hủy</button>
                 </form>
             </div>
         </div>
     </div>
 
-    <h1>Danh sách ngành</h1>
+    <h1 id="td">Danh sách ngành</h1>
 
     <button id="themmoi" class="w3-button w3-green" onclick="toggleForm()">Thêm mới</button>
     <button id="nhapexcel" onclick="openModal()" class="w3-button w3-green nhapexcel">Nhập File</button>

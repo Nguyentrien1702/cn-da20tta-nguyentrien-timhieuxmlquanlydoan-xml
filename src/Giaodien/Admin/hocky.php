@@ -19,6 +19,17 @@
                 box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
                 /* Đổ bóng cho card */
             }
+            h1#td{
+                text-transform:uppercase;
+                font-weight: bolder;
+                color:blue;
+            }
+            .ten{
+                text-transform:uppercase;
+                font-weight: bolder;
+                color:blue;
+                text-align: center;
+            }
         </style>
 
         <div class="w3-content">
@@ -54,7 +65,7 @@
         ?>
         <!-- Form thêm học kỳ -->
         <div id="form" class="form-them-sua" style="display: none;">
-            <h2 class="w3-container w3-red">Thêm Học kỳ Mới</h2>
+            <h2 class="w3-container ten">Thêm Học kỳ Mới</h2>
 
             <form class="w3-container" action="../../Xuly/Xuly_XML/Xuly_hocky.php" method="post">
                 <label for="mahk-nk">Mã Học kỳ:</label>
@@ -73,13 +84,13 @@
                 <input class="w3-input w3-border" type="date" id="ngayketthuc" name="dtngayketthuc" value="<?php echo $ngayketthuc; ?>" required>
 
                 <button class='w3-btn w3-green' type='submit' name='sbmthem'>Thêm</button>
-                <button class="w3-btn w3-red" type="submit" name="sbmhuy" onclick="window.location.href='../../Giaodien/Admin/hocky.php'">Hủy</button>         
+                <button class="w3-btn w3-blue" type="submit" name="sbmhuy" onclick="window.location.href='../../Giaodien/Admin/hocky.php'">Hủy</button>         
             </form>
         </div>
 
         <!-- Form sửa học kỳ -->
         <div id="form_sua" class="form-them-sua" style="display: none;">
-            <h2 class="w3-container w3-red">Sửa Học kỳ</h2>
+            <h2 class="w3-container ten">Sửa Học kỳ</h2>
 
             <form class="w3-container" action="../../Xuly/Xuly_XML/Xuly_hocky.php" method="post">
                 <label for="mahk-nk">Mã Học kỳ:</label>
@@ -98,13 +109,13 @@
                 <input class="w3-input w3-border" type="date" id="ngayketthuc" name="dtngayketthuc" value="<?php echo $ngayketthuc; ?>" required>
 
                 <button class='w3-btn w3-green' type='submit' name='sbmcapnhat'>Cập nhật</button>
-                <button class="w3-btn w3-red" type="submit" name="sbmhuy" onclick="window.location.href='../../Giaodien/Admin/hocky.php'">Hủy</button>
+                <button class="w3-btn w3-blue" type="submit" name="sbmhuy" onclick="window.location.href='../../Giaodien/Admin/hocky.php'">Hủy</button>
 
                 
             </form>
         </div>
 
-        <h1>Danh sách học kỳ</h1>
+        <h1 id="td">Danh sách học kỳ</h1>
         
         <button id="themmoi" class="w3-button w3-green" onclick="toggleForm()">Thêm mới</button>
 

@@ -13,8 +13,7 @@ h2 {
     padding: 20px !important;
     font-size: 40px;
     font-weight: bold;
-    background-color: powderblue;
-    color: red;
+    color:blue;
     text-transform: uppercase;
     margin-bottom: 20px;
 }
@@ -80,7 +79,7 @@ if (isset($_GET['tentaikhoan']) && isset($_GET['p'])) {
 
 <!-- Form đổi mật khẩu -->
 <div id="form">
-    <h2 class="w3-container">Đổi mật khẩu</h2>
+    <h2 >Đổi mật khẩu</h2>
 
     <form class="w3-container" action="../../Xuly/Xuly_XML/Xuly_doimatkhau_gv.php" method="post">
         <table>

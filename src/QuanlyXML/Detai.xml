@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dsdetai>
-  <detai madetai="CN-TT-01">
+  <detai madetai="CSN-TT-01">
     <tendetai>Ứng dụng AI để tạo hồ sơ minh chứng điện tử cho giảng viên từ bản giấy</tendetai>
     <mota>- Nghiên cứu các thư viện OCR với Python
             - Tạo công cụ import ảnh của tài liệu và nhận dạng tên của cán bộ có trong tài liệu
             - Đưa tài liệu vào cơ sở dữ liệu và gán cho các cán bộ có tên trong danh sách
-        </mota>
+    </mota>
     <trangthaixetduyet>1</trangthaixetduyet>
     <maloaidoan>CSN-TT</maloaidoan>
+    <maloaidetai>TTNT</maloaidetai>
     <msgv>00248</msgv>
     <manganh>TT</manganh>
-    <namhoc>2022 - 2023</namhoc>
+    <namhoc>2022-2023</namhoc>
+    <ghichu/>
   </detai>
   <detai madetai="CN-TT-02">
     <tendetai>Xây dựng Website quản lý đoàn viên Khoa Kỹ thuật và Công nghệ</tendetai>
@@ -22,8 +24,11 @@
     </mota>
     <trangthaixetduyet>1</trangthaixetduyet>
     <maloaidoan>CN-TT</maloaidoan>
+    <maloaidetai>UDW</maloaidetai>
     <msgv>00246</msgv>
     <manganh>TT</manganh>
-    <namhoc>2023 - 2024</namhoc>
+    <namhoc>2022-2023</namhoc>
+    <ghichu/>
   </detai>
+  
 </dsdetai>

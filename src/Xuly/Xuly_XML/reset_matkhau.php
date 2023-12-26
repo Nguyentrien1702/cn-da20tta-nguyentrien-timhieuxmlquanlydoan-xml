@@ -22,6 +22,9 @@ function updateAccount($username) {
 
 if(isset($_GET["username"])){
     updateAccount($_GET["username"]);
-    header("location: ../../Giaodien/Admin/Taikhoan.php");
+    echo ("<script language='javascript'>
+                alert('reset mật khẩu thành công');
+                window.location.assign('../../Giaodien/Admin/Taikhoan.php');
+        </script>");
 }
 ?>

@@ -26,9 +26,14 @@ td, th{
     text-align: center !important;
     vertical-align: middle !important;
 }
+h1#td{
+    text-transform:uppercase;
+    font-weight: bolder;
+    color:blue;
+}
 </style>
 <div id="div-content">
-    <h1>Danh sách đề tài</h1>
+    <h1 id="td">Danh sách đề tài</h1>
     <div class="custom-datatable-style">
         <table id="accountTable" class="w3-table w3-bordered w3-striped display" style="width: 100%; margin-top: 10px;">
             <thead>
@@ -37,6 +42,7 @@ td, th{
                     <th class="table-header">Tên đề tài</th>
                     <th class="table-header">Mô tả</th>
                     <th class="table-header">Loại đồ án</th>
+                    <th class="table-header">Loại đề tài</th>
                     <th class="table-header">Ngành</th>
                     <th class="table-header">Năm học</th>
                     <th class="table-header">Giảng viên ra đề tài</th>
@@ -48,6 +54,8 @@ td, th{
                     $xml = simplexml_load_file($xmlFilePath);
                     $xmlFilePath_loaidoan = '../../QuanlyXML/Loaidoan.xml';
                     $xml_loaidoan = simplexml_load_file($xmlFilePath_loaidoan);
+                    $xmlFilePath_loaidetai = '../../QuanlyXML/Loaidetai.xml';
+                    $xml_loaidetai = simplexml_load_file($xmlFilePath_loaidetai);
                     $xmlFilePath_nganh = '../../QuanlyXML/Nganh.xml';
                     $xml_nganh = simplexml_load_file($xmlFilePath_nganh);
                     $xmlFilePath_giangvien = '../../QuanlyXML/Giangvien.xml';
@@ -66,6 +74,13 @@ td, th{
                               break;
                             }
                           }
+                        
+                        foreach ($xml_loaidetai->loaidetai as $loaidetai) {
+                            if((string)$loaidetai['maloaidetai'] == (string)$detai->maloaidetai){
+                              echo "<td>".$loaidetai->tenloaidetai."</td>";
+                              break;
+                            }
+                        }  
 
                         foreach ($xml_nganh->nganh as $nganh) {
                             if((string)$nganh['manganh'] == (string)$detai->manganh){

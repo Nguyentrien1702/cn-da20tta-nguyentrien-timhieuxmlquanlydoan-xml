@@ -26,7 +26,7 @@
   ?>
   <!-- Navbar -->
   <div class="w3-top">
-    <div class="w3-bar w3-gray w3-card" style="font-weight: 600;">
+    <div class="w3-bar w3-blue w3-card" style="font-weight: 600;">
       <a href="#" class="w3-bar-item w3-button w3-padding-large"><img width="25px" src="../../images/logotvu.png" alt="logo-tvu">
       <a href="Giaodien_admin.php" class="w3-bar-item w3-button w3-padding-large">Trang chủ</a>
       <div class="w3-dropdown-hover w3-hide-small">
@@ -37,7 +37,7 @@
         </div>
       </div>
       <a href="detai.php" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Quản lý đề tài</a>
-      <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Quản lý đăng ký</a>
+      <a href="dsdangky.php" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Quản lý đăng ký</a>
       <div class="w3-dropdown-hover w3-hide-small">
         <button class="w3-padding-large w3-button" title="More">Quản lý khác <i class="fa fa-caret-down"></i></button>  
         <div class="w3-dropdown-content w3-bar-block w3-card-4">

@@ -3,6 +3,7 @@ require '../../vendor/autoload.php'; // Đường dẫn đến autoload.php củ
 
 // Đường dẫn đến tài liệu XML
 $xmlFilePath = '../../QuanlyXML/Giangvien.xml';
+$xmlFilePath_taikhoan = '../../QuanlyXML/Taikhoan.xml';
 
 // Hàm kiểm tra xem Giảng viên có tồn tại hay không
 function isGiangvienExists($xmlFilePath, $msgv) {
@@ -14,8 +15,25 @@ function isGiangvienExists($xmlFilePath, $msgv) {
     }
     return false;
 }
+// Hàm thêm tài khoản mới
+function addAccount($xmlFilePath, $username, $password, $accountType) {
+    $xml = simplexml_load_file($xmlFilePath);
 
-// Hàm thêm Lớp mới
+    $newAccount = $xml->addChild('taikhoan');
+    $newAccount->addAttribute('tentaikhoan', $username);
+    $newAccount->addChild('matkhau', md5($password));
+    $newAccount->addChild('loaitaikhoan', $accountType);
+
+    // Định dạng xuống dòng và thụt đầu dòng
+    $dom = new DOMDocument('1.0');
+    $dom->preserveWhiteSpace = false;
+    $dom->formatOutput = true;
+    $dom->loadXML($xml->asXML());
+
+    // Lưu thay đổi vào tệp XML
+    $dom->save($xmlFilePath);
+}
+// Hàm thêm Giảng viên mới
 function addGiangvien($xmlFilePath, $msgv, $tengiangvien, $gioitinh, $sodienthoai, $email, $phong) {
     $xml = simplexml_load_file($xmlFilePath);
 
@@ -93,11 +111,14 @@ if(isset($_POST["sbmthem"])){
     $email = $_POST["txtemail"];
     $phong = $_POST["txtphong"];
 
+    $pass= "1";
+
     if(isGiangvienExists($xmlFilePath, $msgv)){
         myAlert("Mã giảng viên đã tồn tại","../../Giaodien/Admin/giangvien.php?msgv=$msgv&tengiangvien=$tengiangvien&gioitinh=$gioitinh&sodienthoai=$sodienthoai&email=$email&phong=$phong");
     }
     else{
         addGiangvien($xmlFilePath, $msgv, $tengiangvien, $gioitinh, $sodienthoai, $email, $phong);
+        addAccount($xmlFilePath_taikhoan, $msgv, $pass, "Giangvien");
         header("Location: ../../Giaodien/Admin/giangvien.php");
     }
 }

@@ -10,7 +10,19 @@ include("header-admin.php");
 <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
 
 <link rel="stylesheet" href="css/them-sua.css">
-
+<style>
+    h1#td{
+    text-transform:uppercase;
+    font-weight: bolder;
+    color:blue;
+    }
+    .ten{
+        text-transform:uppercase;
+        font-weight: bolder;
+        color:blue;
+        text-align: center;
+    }
+</style>
 <?php
     $xmlFilePath1 = '../../QuanlyXML/Nganh.xml';
     $xml1 = simplexml_load_file($xmlFilePath1);
@@ -28,7 +40,7 @@ include("header-admin.php");
 
 <div class="w3-content">
     <div id="form" class="form-them-sua" style="display: none;">
-        <h2 class="w3-container w3-red">Thêm Loại Đồ Án Mới</h2>
+        <h2 class="w3-container ten">Thêm Loại Đồ Án Mới</h2>
 
         <form class="w3-container" action="../../Xuly/Xuly_XML/Xuly_loaidoan.php" method="post">
             <label for="loaidoan">Loại đồ án:</label>
@@ -64,7 +76,7 @@ include("header-admin.php");
         </form>
     </div>
 
-    <h1>Danh sách loại đồ án</h1>
+    <h1 id="td">Danh sách loại đồ án</h1>
 
     <button id="themmoi" class="w3-button w3-green" onclick="toggleForm()">Thêm mới</button>
 

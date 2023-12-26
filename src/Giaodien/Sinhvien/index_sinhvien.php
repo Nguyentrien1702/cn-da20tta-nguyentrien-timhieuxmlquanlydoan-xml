@@ -1,117 +1,297 @@
 <?php
-  include("header-sinhvien.php")
+  include("header-sinhvien.php");
+  $user = $_SESSION["user"];
 ?>
 <style>
-  label{
-    margin-top: 15px;
-  }
+.div-content {
+    width: 95%;
+    margin: auto;
+}
+
+h1 {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    text-align: center;
+    color: blue;
+}
+
+td,
+th {
+    text-align: center;
+    vertical-align: middle !important;
+}
+
+textarea {
+    resize: none;
+    /* Ngăn chặn resize tự do của textarea */
+}
+
+#btnluudetai {
+    margin: 10px 10px;
+    padding: 5px;
+    background-color: #1a1aff;
+    color: white;
+    font-size: 16px;
+    width: 80px;
+    height: 40px;
+    border-radius: 7px;
+}
+
+#btnluudetai:hover {
+    background-color: #0000e6;
+}
+.mota {
+    width: 25%;
+    white-space: pre-line;
+    margin-top: 0px;
+    }
+#huydangky{
+    padding: 5px;
+    background-color: blue;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+}
+#huydangky:hover{
+    background-color: green;
+}
 </style>
-<div>
-    <h2 style="font-weight: bold; color: red; margin-bottom: 30px; text-align: center; ">THÔNG TIN CÁ NHÂN</h2>
 
-    <?php
-      $file_path = '../../QuanlyXML/Sinhvien.xml';
-      $file_path1 = '../../QuanlyXML/Lop.xml';
-      $mssv_to_find = $_SESSION["user"];
+<div class="div-content">
+    <h1>Các hoạt động</h1>
+    <table id="accountTable" class="w3-table w3-bordered w3-striped display" style="width: 100%; margin-top: 10px;">
+        <thead>
+            <tr>
+                <th class="table-header" >STT</th>
+                <th class="table-header" >Công việc</th>
+                <th class="table-header" >Người thực hiện</th>
+                <th class="table-header" >Loại đồ án</th>
+                <th class="table-header" >Ngành</th>
+                <th class="table-header" >Năm học</th>
+                <th class="table-header" >Ngày bắt đầu</th>
+                <th class="table-header" >Ngày kết thúc</th>
+                <th class="table-header" >Trạng thái</th>
+                <th class="table-header" >Thao tác</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+                $xmlFilePath = '../../QuanlyXML/Thoigiantao_dangky.xml';
+                $xml = simplexml_load_file($xmlFilePath);
+                $xmlFilePath1 = '../../QuanlyXML/Loaidoan.xml';
+                $xml1 = simplexml_load_file($xmlFilePath1);
+                $xmlFilePath_n = '../../QuanlyXML/Nganh.xml';
+                $xml_n = simplexml_load_file($xmlFilePath_n);
+                $i = 1;
+                foreach ($xml->thoigian as $thoigian) {
+                  if(($thoigian->ngayketthuc >= date("Y-m-d"))){
+                    echo "<tr>";
+                    echo "<td id='stt'>".$i++."</td>";
+                    $matg = $thoigian["matg"];
+                    if($thoigian->quyen == "giangvien"){
+                      echo "<td>Ra đề tài</td>";
+                      echo "<td>Giảng viên</td>";
+                      $gv_sv = 0;
+                    }else{
+                      echo "<td>Đăng ký đề tài</td>";
+                      echo "<td>Sinh viên</td>";
+                      $gv_sv = 1;
+                    }
+                    $maloai = $thoigian->maloaidoan;
+                    foreach ($xml1->loaidoan as $loaidoan) {
+                      if((string)$loaidoan['maloaidoan'] == (string)$thoigian->maloaidoan){
+                        echo "<td>".$loaidoan->tenloai."</td>";
+                        break;
+                      }
+                    }
+                    $ma =explode("-", $thoigian->maloaidoan);
+                    $manganh = end($ma);
+                    foreach ($xml_n->nganh as $nganh) {
+                        if((string)$nganh['manganh'] == $manganh){
+                          echo "<td>".$nganh->tennganh."</td>";
+                          break;
+                        }
+                      }
+                    echo "<td>".$thoigian->namhoc."</td>";
+                    $namhoc = $thoigian->namhoc;
+                    echo "<td>".date('d-m-Y', strtotime($thoigian->ngaybatdau))."</td>";
+                    echo "<td>".date('d-m-Y', strtotime($thoigian->ngayketthuc))."</td>";
 
-      // Load XML file
-      $xml = simplexml_load_file($file_path);
-      $xml1 = simplexml_load_file($file_path1);
-
-      // Duyệt qua từng sinh viên trong file XML
-      foreach ($xml->sinhvien as $sinh_vien) {
-          // Lấy giá trị của thuộc tính mssv
-          $mssv = (string) $sinh_vien['mssv'];
-
-          // So sánh MSSV
-          if ($mssv == $mssv_to_find) {
-              // Lấy thông tin sinh viên
-              $tensinhvien = (string) $sinh_vien->tensinhvien;
-              $gioitinh = (string) $sinh_vien->gioitinh;
-              $sodienthoai = (string) $sinh_vien->sodienthoai;
-              $email = (string) $sinh_vien->email;
-              $malop = (string) $sinh_vien->malop;
-              foreach ($xml1->lop as $lop) {
-                if ((string) $lop['malop'] == $malop) {
-                  $tenlop = (string) $lop->tenlop;
-                  $khoa = (string) $lop->khoa;
-                }break;
-              }
-              // Thoát khỏi vòng lặp vì chúng ta đã tìm thấy sinh viên cần
-              break;
-          }
-      }
-    ?>
-    <div id="formsinhvien" style="width: 50%; margin: auto">
-        <form class="w3-container" action="#" method="post">
-            <label for="mssv">Mã Số Sinh Viên:</label>
-            <input class="w3-input w3-border" type="text" id="mssv" name="txtmssv" value="<?php echo $mssv; ?>"
-                readonly>
-
-            <label for="tensinhvien">Tên Sinh Viên:</label>
-            <input class="w3-input w3-border" type="text" id="tensinhvien" name="txttensinhvien"
-                value="<?php echo $tensinhvien; ?>" required>
-
-            <label>Giới Tính:</label>
-            <label><input class="w3-radio w3-margin-left" type="radio" name="rdgioitinh" value="Nam" checked>
-                Nam</label>
-            <label><input class="w3-radio w3-margin-left" type="radio" name="rdgioitinh" value="Nữ"
-                    <?php  if ($gioitinh == "Nữ") echo 'checked'; ?>> Nữ</label>
-            <br>
-            <label for="sodienthoai">Số Điện Thoại:</label>
-            <input class="w3-input w3-border" type="text" id="sodienthoai" name="txtsodienthoai"
-                value="<?php echo $sodienthoai; ?>">
-
-            <label for="email">Email:</label>
-            <input class="w3-input w3-border" type="text" id="email" name="txtemail" value="<?php echo $email; ?>">
-
-            <label for="malop_sua">Mã Lớp:</label>
-            <input class="w3-input w3-border" type="text" id="lop" name="txtlop" value="<?php echo $malop." - ". $tenlop. " khóa ". $khoa; ?>">
-
-            <button class='w3-btn w3-green' type='submit' name='sbmcapnhat' style="margin-top: 20px;">Cập nhật thông tin</button>
-
-        </form>
-    </div>
+                    if(($thoigian->ngaybatdau<= date("Y-m-d")) && ($thoigian->ngayketthuc >= date("Y-m-d"))){
+                        echo "<td style='color: green'>Đang diễn ra</td>";
+                    }elseif(($thoigian->ngaybatdau > date("Y-m-d"))){
+                        echo "<td style='color: blue'>Sắp diễn ra</td>";
+                    }else{
+                        echo "<td style='color: red'>Đã đóng</td>";
+                    }
+                    if($gv_sv == 0){
+                        echo "<td></td>";
+                      
+                    }else{
+                        echo "<td style='text-align: center;'>
+                        <a  href='#?matg=$matg' style='margin-right: 5px; color: gray'>Danh sách sv đăng ký</a>
+                            </td>";
+                    }
+                    echo "</tr>";
+                  }
+                }
+                ?>
+        </tbody>
+    </table>
 </div>
-
 <?php
+    $xmlFilePath_dt = '../../QuanlyXML/Detai.xml';
+    $xml_dt = simplexml_load_file($xmlFilePath_dt);
+    $xmlFilePath_gv = '../../QuanlyXML/Giangvien.xml';
+    $xml_gv = simplexml_load_file($xmlFilePath_gv);
+    $xmlFilePath_n = '../../QuanlyXML/Nganh.xml';
+    $xml_n = simplexml_load_file($xmlFilePath_n);
+    $xmlFilePath_lda = '../../QuanlyXML/Loaidoan.xml';
+    $xml_lda = simplexml_load_file($xmlFilePath_lda);
+    $xmlFilePath_sv = '../../QuanlyXML/Sinhvien.xml';
+    $xml_sv = simplexml_load_file($xmlFilePath_sv);
+    $xmlFilePath_l = '../../QuanlyXML/Lop.xml';
+    $xml_l = simplexml_load_file($xmlFilePath_l);
+    $xmlFilePath_tg = '../../QuanlyXML/Thoigiantao_dangky.xml';
+    $xml_tg = simplexml_load_file($xmlFilePath_tg);
+    $xmlFilePath_dk = '../../QuanlyXML/Dangky.xml';
+    $xml_dk = simplexml_load_file($xmlFilePath_dk);
 
-  if(isset($_POST["sbmcapnhat"])){
-    $mssv = $_POST["txtmssv"];
-    $tensinhvien = $_POST["txttensinhvien"];
-    $gioitinh = $_POST["rdgioitinh"];
-    $sodienthoai = $_POST["txtsodienthoai"];
-    $email = $_POST["txtemail"];
-
-    updatesinhvien($file_path, $mssv, $tensinhvien, $gioitinh, $sodienthoai, $email);
-    
-  }
-
-  function updatesinhvien($file_path, $mssv, $tensinhvien, $gioitinh, $sodienthoai, $email) {
-    $xml = simplexml_load_file($file_path);
-    // Tìm và cập nhật thông tin Giảng viên
-    foreach ($xml->sinhvien as $sinhvien) {
-        if ((string)$sinhvien['mssv'] === $mssv) {
-            // Cập nhật Giảng viên
-            $sinhvien->tensinhvien = $tensinhvien;
-            $sinhvien->gioitinh = $gioitinh;
-            $sinhvien->sodienthoai = $sodienthoai;
-            $sinhvien->email = $email;
-
-            // Lưu thay đổi vào tệp XML
-            $xml->asXML($file_path);
-            echo '<script type="text/javascript">';
-            echo 'alert("Cập nhật thành công thành công");';
-            echo 'window.location.href  = "index_sinhvien.php";';
-            echo '</script>';
-
-            // Kết thúc vòng lặp vì đã tìm thấy và cập nhật Giảng viên
+    $manganh = "";
+    $namhoc = "";
+    $dadangky = "0";
+    $mssv = $_SESSION["user"];
+    foreach($xml_sv->sinhvien as $sinhvien){
+        if($_SESSION["user"] == (string)$sinhvien["mssv"]){
+            foreach($xml_l->lop as $lop){
+                if((string)$lop["malop"] == (string)$sinhvien->malop){
+                    $manganh = $lop->manganh;
+                    break;
+                }
+            }
             break;
         }
     }
-}
-?>
+    foreach($xml_tg->thoigian as $thoigian){
+        if(($thoigian->ngaybatdau<= date("Y-m-d")) && ($thoigian->ngayketthuc >= date("Y-m-d"))){
+            if((string)$thoigian->quyen == "sinhvien"){                            
+                $ma =explode("-", $thoigian->maloaidoan);
+                $manganh_tg = end($ma);                            
+                if($manganh == $manganh_tg){                                
+                    $namhoc = $thoigian->namhoc;
+                    break;
+                }
+            }
+            
+        }
+        
+    }
+    foreach($xml_dk->dangky as $dangky){                            
+        if((string)$dangky->mssv == $mssv && (string)$dangky->namhoc == $namhoc){
+                $dadangky = "1";
+        }
+    }
+    if($dadangky == "1"){
+        ?>
+        <div class="div-content">
+        <hr style='border: 2px solid black; margin: 40px'>
+        <h1>Đề tài đã đăng ký</h1>
+        <?php
+        $madetai="";
+        $maloaidoan = "";
+        $tendetai = "";
+        $mota = "";
+        $msgv_hd = "";
+        $tengiangvien = "";
+        $tensinhvien = "";
+        $malop = "";
+            foreach($xml_dk->dangky as $dangky){                            
+                if((string)$dangky->mssv == $mssv && (string)$dangky->namhoc == $namhoc){
+                        $madetai = $dangky->madetai; 
+                        $msgv_hd = $dangky->msgv_hd;                                                        
+                        break;
+                }
+            }
+            foreach($xml_dt->detai as $detai){
+                if((string)$detai['madetai'] == $madetai){
+                    $tendetai = $detai->tendetai;
+                    $mota = $detai->mota;
+                    $maloaidoan = $detai->maloaidoan;
+                    break;
+                }
+            }
+            foreach($xml_gv->giangvien as $giangvien){
+                if((string)$giangvien['msgv'] == $msgv_hd){
+                    $tengiangvien = $giangvien->tengiangvien;
+                }
+            }
+            foreach($xml_sv->sinhvien as $sinhvien){
+                if((string)$sinhvien['mssv'] == $mssv){
+                    $tensinhvien = $sinhvien->tensinhvien;
+                    $malop = $sinhvien->malop;
+                }
+            }
+            foreach($xml_lda->loaidoan as $loaidoan){
+                if((string)$loaidoan['maloaidoan'] == $maloaidoan){
+                    echo "<p><b>Loại đồ án: </b>".$loaidoan->tenloai."</p>";
+                    break;
+                }
+            }
+            foreach($xml_n->nganh as $nganh){
+                if((string)$nganh['manganh'] == $manganh){
+                    echo "<p><b>Ngành: </b>".$nganh->tennganh."</p>";
+                    echo "<p><b>Năm học: </b>".$namhoc."</p>";
+                    break;
+                }
+            }
+        ?>
+        <table id="accountTable" class="w3-table w3-bordered w3-striped display" style="width: 100%; margin-top: 10px;">
+            <thead>
+                <tr>
+                    <th class="table-header" >Tên đề tài</th>
+                    <th class="table-header" >Mô tả</th>
+                    <th class="table-header" >GV hướng dẫn</th>
+                    <th class="table-header" >MSSV</th>
+                    <th class="table-header" >Họ tên SV</th>
+                    <th class="table-header" >Lớp</th>
+                    <th class="table-header" style="text-align: center;">Thao tác</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                //echo '<script type="text/javascript">alert("'.$madetai.'");</script>';
+                    echo "<td class='mota'>".$tendetai."</td>";
+                    echo "<td class='mota'>".$mota."</td>";
+                    echo "<td>".$tengiangvien."</td>";
+                    echo "<td>".$mssv."</td>";
+                    echo "<td>".$tensinhvien."</td>";
+                    echo "<td>".$malop."</td>";
+                    foreach($xml_tg->thoigian as $thoigian){
+                        if(($thoigian->ngaybatdau<= date("Y-m-d")) && ($thoigian->ngayketthuc >= date("Y-m-d"))){
+                            if((string)$thoigian->quyen == "sinhvien"){
+                                echo "<td  style='text-align: center;'>
+                                <a id='huydangky' href='../../Xuly/Xuly_XML/Xuly_huydangky.php?madetai_huy=$madetai'>Hủy đăng ký</a>
+                                </td>";
+                                break;
+                            }
+                        }else{
+                            echo "<p><i>Ngoài thời gian</i></p>";
+                        }
+                    }
+                ?>
+            </tbody>
+        </table>
+        </div>
+    <?php
+        }
 
+    ?>
+
+
+<script>
+
+</script>
 <?php
   include("footer-sinhvien.php")
 ?>

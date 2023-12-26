@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dsdangky>
-    <dangky>
-        <madetai></madetai>
-        <mssv></mssv>
-        <magv-hd></magv-hd>
-        <mahk-nk></mahk-nk>
-        <ngaydangky></ngaydangky>
-    </dangky>
+  <dangky>
+    <madetai>CN-TT-02</madetai>
+    <mssv>110120081</mssv>
+    <msgv_hd>00248</msgv_hd>
+    <namhoc>2022-2023</namhoc>
+    <ngaydangky>2023-12-26</ngaydangky>
+  </dangky>
+  <dangky>
+    <madetai>CSN-TT-01</madetai>
+    <mssv>110120051</mssv>
+    <msgv_hd>00248</msgv_hd>
+    <namhoc>2022-2023</namhoc>
+    <ngaydangky>2023-12-26</ngaydangky>
+  </dangky>
 </dsdangky>

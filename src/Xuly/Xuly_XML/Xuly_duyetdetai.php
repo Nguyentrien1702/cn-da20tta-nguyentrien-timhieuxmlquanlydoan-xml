@@ -12,4 +12,14 @@ if (isset($_GET["duyet_madetai"])) {
     deleteDetai($xmlFilePath, $madetai);
     header("location: ../../Giaodien/Admin/Giaodien_admin.php");
 }
+
+
+if(isset($_POST["sbmghichu"])){
+    $madetai = $_POST["madetai"];
+    $ghichu = $_POST["lido"];
+    $trangthai = "2";
+
+    updateDetaighichu($xmlFilePath, $madetai, $trangthai, $ghichu);
+    header("location: ../../Giaodien/Admin/Giaodien_admin.php");
+}
 ?>

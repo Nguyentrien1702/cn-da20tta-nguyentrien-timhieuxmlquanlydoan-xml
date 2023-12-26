@@ -45,6 +45,17 @@
     width: 80%;
     margin: auto;
 }
+h1#td{
+    text-transform:uppercase;
+    font-weight: bolder;
+    color:blue;
+}
+.ten{
+    text-transform:uppercase;
+    font-weight: bolder;
+    color:blue;
+    text-align: center;
+}
 
 </style>
 
@@ -85,7 +96,7 @@
 
     <!-- Form thêm giảng viên -->
     <div id="form" class="form-them-sua" style="display: none;">
-        <h2 class="w3-container w3-blue">Thêm Giảng Viên Mới</h2>
+        <h2 class="w3-container ten" >Thêm Giảng Viên Mới</h2>
 
         <form class="w3-container" action="../../Xuly/Xuly_XML/Xuly_giangvien.php" method="post">
             <label for="msgv">Mã Số Giảng Viên:</label>
@@ -120,7 +131,7 @@
 
     <!-- Form sửa giảng viên -->
     <div id="form_sua" class="form-them-sua" style="display: none;">
-        <h2 class="w3-container w3-blue">Sửa Giảng Viên Mới</h2>
+        <h2 class="w3-container ten" >Sửa Giảng Viên Mới</h2>
 
         <form class="w3-container" action="../../Xuly/Xuly_XML/Xuly_giangvien.php" method="post">
             <label for="msgv">Mã Số Giảng Viên:</label>
@@ -173,7 +184,7 @@
         </div>
     </div>
 
-    <h1 style="color: black">Danh sách Giảng viên</h1>
+    <h1 style="color: black" id="td">Danh sách Giảng viên</h1>
 
     <button id="themmoi" class="w3-button w3-green" onclick="toggleForm()">Thêm mới</button>
     <button id="nhapexcel" onclick="openModal()" class="w3-button w3-green nhapexcel">Nhập File</button>

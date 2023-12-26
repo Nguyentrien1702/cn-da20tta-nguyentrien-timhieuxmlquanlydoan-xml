@@ -16,21 +16,21 @@
       // Load XML file
       $xml = simplexml_load_file($file_path);
 
-      // Duyệt qua từng sinh viên trong file XML
+      // Duyệt qua từng giảng viên trong file XML
       foreach ($xml->giangvien as $giangvien) {
           // Lấy giá trị của thuộc tính msgv
           $msgv = (string) $giangvien['msgv'];
 
           // So sánh msgv
           if ($msgv == $msgv_to_find) {
-              // Lấy thông tin sinh viên
+              // Lấy thông tin giảng viên
               $tengiangvien = (string) $giangvien->tengiangvien;
               $gioitinh = (string) $giangvien->gioitinh;
               $sodienthoai = (string) $giangvien->sodienthoai;
               $email = (string) $giangvien->email;
               $phong = (string) $giangvien->phong;
               
-              // Thoát khỏi vòng lặp vì chúng ta đã tìm thấy sinh viên cần
+              // Thoát khỏi vòng lặp vì chúng ta đã tìm thấy giảng viên cần
               break;
           }
       }

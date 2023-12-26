@@ -25,39 +25,55 @@ h1 {
     left: 50%;
     transform: translate(-50%, -50%);
 }
-.tick-symbol,.cross-symbol{
+
+.tick-symbol,
+.cross-symbol {
     text-decoration: none;
     padding: 7px;
     font-size: 20px;
     font-weight: bolder;
     border-radius: 5px;
 }
-.tick-symbol{
+
+.tick-symbol {
     background-color: cadetblue;
 }
 
-.cross-symbol{
+.cross-symbol {
     background-color: cadetblue;
 }
+
 /* Dấu tick khi nút được hover */
 .tick-symbol:hover {
-    font-size: 30px;
+    font-size: 25px;
     color: green;
     /* Màu sắc khi hover */
 }
 
 /* Dấu x khi nút được hover */
 .cross-symbol:hover {
-    font-size: 30px;
+    font-size: 25px;
     color: red;
     /* Màu sắc khi hover */
 }
-th{
+
+th {
     text-align: center;
 }
-td, th{
-    
+
+td,
+th {
+
     vertical-align: middle !important;
+}
+
+h1#td {
+    text-transform: uppercase;
+    font-weight: bolder;
+    color: blue;
+}
+textarea {
+      resize: none; /* Ngăn chặn resize tự do của textarea */
 }
 </style>
 <?php
@@ -89,6 +105,7 @@ $xml1 = simplexml_load_file($xmlFilePath1);
 
   // Sắp xếp mảng theo giá trị tăng dần
   sort($uniqueKeys);
+
 ?>
 
 <div>
@@ -98,7 +115,7 @@ $xml1 = simplexml_load_file($xmlFilePath1);
         <div class="w3-modal-content w3-animate-zoom" style="width: 400px;">
             <div class="w3-container" style="height: 550px;">
                 <span onclick="closeModal()" class="w3-button w3-display-topright">&times;</span>
-                <h2>Tạo thời gian đồ án</h2>
+                <h2 style="color: blue; font-weight: bold;">Tạo thời gian đồ án</h2>
                 <form action="../../Xuly/Xuly_taothoigian.php" method="post">
 
                     <label for="quyen">Quyền:</label>
@@ -134,7 +151,7 @@ $xml1 = simplexml_load_file($xmlFilePath1);
 
                     <label for="khoaSelect">Năm học:</label>
                     <select class="w3-input w3-border" id="khoa" name="txtkhoa">
-                        <?php
+                    <?php
                     // Lặp qua mảng khóa và tạo các option
                     foreach ($uniqueKeys as $khoa) {
                         echo "<option value=\"$khoa\">$khoa</option>";
@@ -150,8 +167,31 @@ $xml1 = simplexml_load_file($xmlFilePath1);
                     <input class="w3-input w3-border w3-datepicker" type="date" id="ngaykt" name="ngaykt"
                         placeholder="Chọn ngày" required>
                     <br>
-                    <button type="submit" class="w3-button w3-green" name="sbmthem_thoigian">Thêm</button>
+                    <button type="submit" class="w3-button w3-blue" name="sbmthem_thoigian">Thêm</button>
                     <button type="button" onclick="closeModal()" class="w3-button w3-red nhapexcel">Hủy</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="capnhat" class="w3-modal">
+        <div class="w3-modal-content w3-animate-zoom" style="width: 400px;">
+            <div class="w3-container" style="height: 300px;">
+                <span onclick="closeModalUpdate()" class="w3-button w3-display-topright">&times;</span>
+                <h2 style="color: blue; font-weight: bold;">Cập nhật thời gian</h2>
+                <form action="../../Xuly/Xuly_taothoigian.php" method="post">
+                    <input type="text" style="display: none;" id="matg_sua" name="matg_sua">
+                    <label class="w3-text">Ngày bắt đầu:</label>
+                    <input class="w3-input w3-border w3-datepicker" 
+                         type="date" id="ngaybd_sua" name="ngaybd_sua" placeholder="Chọn ngày"
+                        required>
+
+                    <label class="w3-text">Ngày kết thúc:</label>
+                    <input class="w3-input w3-border w3-datepicker" type="date" id="ngaykt_sua" name="ngaykt_sua"
+                         placeholder="Chọn ngày" required>
+                    <br>
+                    <button type="submit" class="w3-button w3-blue" name="sbmcapnhat_thoigian">Cập nhật</button>
+                    <button type="button" onclick="closeModalUpdate()" class="w3-button w3-red nhapexcel">Hủy</button>
                 </form>
             </div>
         </div>
@@ -159,7 +199,7 @@ $xml1 = simplexml_load_file($xmlFilePath1);
 </div>
 
 <div class="div-content">
-    <h1>Các hoạt động</h1>
+    <h1 id="td">Các hoạt động</h1>
     <table id="accountTable" class="w3-table w3-bordered w3-striped display" style="width: 100%; margin-top: 10px;">
         <thead>
             <tr>
@@ -185,6 +225,7 @@ $xml1 = simplexml_load_file($xmlFilePath1);
                 $xml2 = simplexml_load_file($xmlFilePath2);
                 $i = 1;
                 foreach ($xml->thoigian as $thoigian) {
+                    $matg = $thoigian['matg'];
                     echo "<tr>";
                     echo "<td id='stt'>".$i++."</td>";
                     if($thoigian->quyen == "giangvien"){
@@ -213,7 +254,8 @@ $xml1 = simplexml_load_file($xmlFilePath1);
                     echo "<td>".$thoigian->namhoc."</td>";
                     echo "<td>".date('d-m-Y', strtotime($thoigian->ngaybatdau))."</td>";
                     echo "<td>".date('d-m-Y', strtotime($thoigian->ngayketthuc))."</td>";
-
+                      $ngaybd = date('d-m-Y', strtotime($thoigian->ngaybatdau));
+                      $ngaykt = date('d-m-Y', strtotime($thoigian->ngayketthuc));
                     if(($thoigian->ngaybatdau<= date("Y-m-d")) && ($thoigian->ngayketthuc >= date("Y-m-d"))){
                         echo "<td style='color: green'>Đang diễn ra</td>";
                     }elseif(($thoigian->ngaybatdau > date("Y-m-d"))){
@@ -221,13 +263,16 @@ $xml1 = simplexml_load_file($xmlFilePath1);
                     }else{
                         echo "<td style='color: red'>Đã đóng</td>";
                     }
-
-                    echo "<td style='text-align: center;'>
-                            <a id='sua' href='#'>Sửa</a>
-                            <a onclick=\"return confirm('Bạn có thật sự muốn xóa đề tài này hay không?')\" id='xoa' href='#'>Xóa</a>
-                          </td>";
-                    echo "</tr>";
-                }
+                    
+                    echo "<td style='text-align: center;'>";
+                        echo "<a id='sua' href='#' onclick='openUpdateModal(\"$matg\",\"$ngaybd\", \"$ngaykt\")' style='margin-right: 5px'>sửa</a>";
+                        // echo "<button id='sua' type='button' onclick='openUpdateModal()' style='margin-right: 5px'>sửa</button>";
+                        
+                            echo "<a onclick=\"return confirm('Bạn có thật sự muốn xóa đề tài này hay không?')\" id='xoa' href='../../Xuly/Xuly_taothoigian.php?matg_xoa=$matg'>Xóa</a>";
+                        
+                        echo "</td>";
+                        echo "</tr>";
+                    }
                 ?>
         </tbody>
     </table>
@@ -247,6 +292,22 @@ $xml1 = simplexml_load_file($xmlFilePath1);
     if(trangthai() == 1){
        echo "<hr style='border: 2px solid black; margin: 40px'>";
 ?>
+    <div id="ghichu" class="w3-modal">
+        <div class="w3-modal-content w3-animate-zoom" style="width: 400px;">
+            <div class="w3-container" style="height: 300px;">
+                <span onclick="closeModalghichu()" class="w3-button w3-display-topright">&times;</span>
+                <form action="../../Xuly/Xuly_XML/Xuly_duyetdetai.php" method="post" style="margin-top: 30px;">
+                    <input type="text" style="display:none;" id="madetai" name="madetai">
+                    <label class="w3-text">Lí do:</label>
+                    <textarea id="lidobo" name="lido" class="w3-input w3-border w3-datepicker"></textarea>
+
+                    <br>
+                    <button type="submit" class="w3-button w3-blue" name="sbmghichu">Xác nhận</button>
+                    <button type="button" onclick="closeModalghichu()" class="w3-button w3-red nhapexcel">Hủy</button>
+                </form>
+            </div>
+        </div>
+    </div>
 <div class="div-content">
     <h1>Danh sách đề tài chờ xét duyệt</h1>
     <table id="accountTable" class="w3-table w3-bordered w3-striped display" style="width: 100%; margin-top: 10px;">
@@ -277,6 +338,7 @@ $xml1 = simplexml_load_file($xmlFilePath1);
                     foreach ($xml->detai as $detai) {
                         if($detai->trangthaixetduyet == 0){
                         echo "<tr>";
+                        $madetai = $detai['madetai'];
                         echo "<td>". $i++ ."</td>";
                         echo "<td class='mota'>{$detai->tendetai}</td>";
                         echo "<td class='mota'>{$detai->mota}</td>";
@@ -303,7 +365,7 @@ $xml1 = simplexml_load_file($xmlFilePath1);
                         }
                         echo "<td style='text-align: center;'>
                             <a id='duyet' href='../../Xuly/Xuly_XML/Xuly_duyetdetai.php?duyet_madetai={$detai['madetai']}' class='tick-symbol'>&#10003;</a>
-                            <a onclick=\"return confirm('Bạn có thật sự muốn xóa đề tài này hay không?')\" id='loaibo' class='cross-symbol' href='../../Xuly/Xuly_XML/Xuly_duyetdetai?loaibo_madetai={$detai['madetai']}'>&#10007;</a>
+                            <a onclick='return openModalghichu(\"$madetai\")' id='loaibo' class='cross-symbol' href=''>&#10007;</a>
                           </td>";
                         echo "</tr>";}
                     }
@@ -325,11 +387,41 @@ function closeModal() {
     uploadButtonClicked = false;
     document.getElementById('uploadModal').style.display = 'none';
 }
+function openModalghichu(madetai) {
+    document.getElementById('madetai').value = madetai;
+    document.getElementById('lidobo').innerHTML = "";
+    document.getElementById('ghichu').style.display = 'block';
+    return false; // Ngăn chặn sự kiện mặc định (chẳng hạn khi nút là một liên kết)
+}
+
+function closeModalghichu() {
+    uploadButtonClicked = false;
+    document.getElementById('lidobo').innerHTML = "";
+    document.getElementById('ghichu').style.display = 'none';
+}
 
 document.getElementById('ngaybd').addEventListener('change', function() {
     var ngaybdValue = this.value;
     document.getElementById('ngaykt').min = ngaybdValue;
 });
+
+function openUpdateModal(matg, ngaybd, ngaykt) {
+    // Chuyển đổi định dạng ngày từ 'd-m-Y' sang 'Y-m-d'
+    var ngaybdFormatted = ngaybd.split('-').reverse().join('-');
+    var ngayktFormatted = ngaykt.split('-').reverse().join('-');
+    document.getElementById('ngaybd_sua').min = ngaybdFormatted;
+    document.getElementById('ngaykt_sua').min = ngaybdFormatted;
+    // Gán giá trị cho thẻ input
+    document.getElementById('matg_sua').value = matg;
+    document.getElementById('ngaybd_sua').value = ngaybdFormatted;
+    document.getElementById('ngaykt_sua').value = ngayktFormatted;
+    // Mã để mở modal
+    document.getElementById('capnhat').style.display = 'block';
+}
+function closeModalUpdate() {
+    uploadButtonClicked = false;
+    document.getElementById('capnhat').style.display = 'none';
+}
 </script>
 <?php
   include("footer-admin.php")

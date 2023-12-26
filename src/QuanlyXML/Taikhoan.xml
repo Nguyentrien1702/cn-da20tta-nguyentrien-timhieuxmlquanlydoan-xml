@@ -5,13 +5,15 @@
     <loaitaikhoan>Admin</loaitaikhoan>
   </taikhoan>
   <taikhoan tentaikhoan="110120081">
-    <matkhau>202cb962ac59075b964b07152d234b70</matkhau>
+    <matkhau>7aa7e3b38b87b69eddeca90019fc998f</matkhau>
     <loaitaikhoan>Sinhvien</loaitaikhoan>
   </taikhoan>
   <taikhoan tentaikhoan="00246">
     <matkhau>202cb962ac59075b964b07152d234b70</matkhau>
     <loaitaikhoan>Giangvien</loaitaikhoan>
   </taikhoan>
-  
-  
+  <taikhoan tentaikhoan="110120051">
+    <matkhau>d6548f1010a3c876c15226549a0ffbb4</matkhau>
+    <loaitaikhoan>Sinhvien</loaitaikhoan>
+  </taikhoan>
 </dstaikhoan>

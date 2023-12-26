@@ -3,4 +3,10 @@
     <loaidetai maloaidetai = "UDW">
         <tenloaidetai>Ứng dụng web</tenloaidetai>
     </loaidetai>
+    <loaidetai maloaidetai = "MANG">
+        <tenloaidetai>Mạng</tenloaidetai>
+    </loaidetai>
+    <loaidetai maloaidetai = "TTNT">
+        <tenloaidetai>Trí tuệ nhân tạo</tenloaidetai>
+    </loaidetai>
 </dsloaidetai>

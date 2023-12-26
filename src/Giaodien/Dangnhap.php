@@ -24,7 +24,7 @@ if (isset($_GET['txtTentaikhoan']) && isset($_GET['p'])) {
               <div class="col-md-7 right-box">
                 <div class="row align-items-center">
                     <div class="header-text">
-                      <h3 class="mb-4"><strong>Đăng nhập</strong></h3>
+                      <h3 class="mb-4" style="color: blue; text-align:center"><strong>Đăng nhập</strong></h3>
                       <!-- Tên đăng nhập-->
                       <div class="input-group mb-3">
                         <input type="text" name="txtTentaikhoan" ID="txtTentaikhoan" class="form-control form-control-lg bg-light fs-6" placeholder="Tên đăng nhập" value="<?php echo $tenDangNhap; ?>"/>

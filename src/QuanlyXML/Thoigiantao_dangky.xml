@@ -2,16 +2,30 @@
 <dsthoigian>
   <thoigian matg="65703f4b422eb">
     <quyen>giangvien</quyen>
-    <maloaidoan>CSN-TT</maloaidoan>
+    <maloaidoan>CN-TT</maloaidoan>
     <namhoc>2022-2023</namhoc>
     <ngaybatdau>2023-12-06</ngaybatdau>
-    <ngayketthuc>2023-12-13</ngayketthuc>
+    <ngayketthuc>2023-12-31</ngayketthuc>
   </thoigian>
   <thoigian matg="65707d9f6aa14">
     <quyen>sinhvien</quyen>
     <maloaidoan>CSN-TT</maloaidoan>
     <namhoc>2022-2023</namhoc>
     <ngaybatdau>2023-12-07</ngaybatdau>
-    <ngayketthuc>2023-12-15</ngayketthuc>
+    <ngayketthuc>2023-12-31</ngayketthuc>
+  </thoigian>
+  <thoigian matg="658a88d83f5b5">
+    <quyen>sinhvien</quyen>
+    <maloaidoan>CN-TT</maloaidoan>
+    <namhoc>2022-2023</namhoc>
+    <ngaybatdau>2023-12-26</ngaybatdau>
+    <ngayketthuc>2023-12-31</ngayketthuc>
+  </thoigian>
+  <thoigian matg="658af81e342e0">
+    <quyen>giangvien</quyen>
+    <maloaidoan>CSN-TT</maloaidoan>
+    <namhoc>2022-2023</namhoc>
+    <ngaybatdau>2023-12-26</ngaybatdau>
+    <ngayketthuc>2023-12-31</ngayketthuc>
   </thoigian>
 </dsthoigian>

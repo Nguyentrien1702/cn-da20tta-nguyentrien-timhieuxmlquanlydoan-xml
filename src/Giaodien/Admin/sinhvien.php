@@ -50,7 +50,15 @@ h1#td{
     font-weight: bolder;
     color:blue;
 }
-
+.ten{
+    text-transform:uppercase;
+    font-weight: bolder;
+    color:blue;
+    text-align: center;
+}
+.btn{
+    margin-top: 10px;
+}
 </style>
 
 <?php
@@ -92,7 +100,7 @@ h1#td{
 
     <!-- Form thêm Sinh viên -->
     <div id="form" class="form-them-sua" style="display: none;">
-        <h2 class="w3-container">Thêm Sinh Viên Mới</h2>
+        <h2 class="w3-container ten">Thêm Sinh Viên Mới</h2>
 
         <form class="w3-container" action="../../Xuly/Xuly_XML/Xuly_sinhvien.php" method="post">
             <label for="mssv">Mã Số Sinh Viên:</label>
@@ -135,16 +143,16 @@ h1#td{
                     }
                 ?>
             </select>
-
-            <button class='w3-btn w3-green' type='submit' name='sbmthem'>Thêm</button>
-            <button class="w3-btn w3-red" type="submit" name="sbmhuy"
+            
+            <button class='w3-btn w3-green btn' type='submit' name='sbmthem'>Thêm</button>
+            <button class="w3-btn w3-red btn" type="submit" name="sbmhuy"
                 onclick="window.location.href='../../Giaodien/Admin/sinhvien.php'">Hủy</button>
         </form>
     </div>
 
     <!-- Form sửa Sinh viên -->
     <div id="form_sua" class="form-them-sua" style="display: none;">
-        <h2 class="w3-container">Sửa Sinh Viên Mới</h2>
+        <h2 class="w3-container ten">Sửa Sinh Viên Mới</h2>
 
         <form class="w3-container" action="../../Xuly/Xuly_XML/Xuly_sinhvien.php" method="post">
             <label for="mssv">Mã Số Sinh Viên:</label>
@@ -189,8 +197,8 @@ h1#td{
                 ?>
             </select>
 
-            <button class='w3-btn w3-green' type='submit' name='sbmcapnhat'>Cập nhật</button>
-            <button class="w3-btn w3-red" type="submit" name="sbmhuy"
+            <button class='w3-btn w3-green btn' type='submit' name='sbmcapnhat'>Cập nhật</button>
+            <button class="w3-btn w3-red btn" type="submit" name="sbmhuy"
             onclick="window.location.href='../../Giaodien/Admin/sinhvien.php'">Hủy</button>
         </form>
     </div>

@@ -53,11 +53,16 @@
             background-color: green;
             font-size: 17px;
         }
+        h1#td{
+            text-transform:uppercase;
+            font-weight: bolder;
+            color:blue;
+        }
     </style>
 
 
 <div class="w3-content">
-    <h1>Danh sách tài khoản</h1>
+    <h1 id="td">Danh sách tài khoản</h1>
 
     <table id="accountTable" class="w3-table w3-bordered w3-striped display" style="width: 100%; margin-top: 10px;">
         <thead>
@@ -81,7 +86,7 @@
                     echo "<td>{$taikhoan['tentaikhoan']}</td>";
                     echo "<td>{$taikhoan->matkhau}</td>";
                     echo "<td>{$taikhoan->loaitaikhoan}</td>";
-                    echo "<td style='text-align: center;'><a href='../../Xuly/Xulu_XML/reset_matkhau.php?username={$taikhoan['tentaikhoan']}' class='reset'>Reset</a></td>";
+                    echo "<td style='text-align: center;'><a href='../../Xuly/Xuly_XML/reset_matkhau.php?username={$taikhoan['tentaikhoan']}' class='reset'>Reset</a></td>";
                     echo "</tr>";
                     }
                 }

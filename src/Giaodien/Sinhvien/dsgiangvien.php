@@ -2,7 +2,7 @@
   include("header-sinhvien.php")
 ?>
 <div style="text-align: center;">
-  <h2 style="font-weight: bold; color: red; margin-bottom: 30px">DANH SÁCH THÔNG TIN GIẢNG VIÊN</h2>
+  <h2 style="font-weight: bold; color: blue; margin-bottom: 30px">DANH SÁCH THÔNG TIN GIẢNG VIÊN</h2>
     <div class="custom-datatable-style">
     <table id="accountTable" class="w3-table w3-bordered w3-striped display" style="width: 80%; margin-top: 10px; margin: auto">
         <thead>

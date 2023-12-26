@@ -1,6 +1,6 @@
 </div>
 
-  <footer class="w3-container w3-padding-16 w3-center w3-opacity w3-gray w3-xlarge w3-bottom"> 
+  <footer class="w3-container w3-padding-16 w3-center w3-opacity w3-gray w3-xlarge"> 
       <p class="w3-medium">Copyright &copy; Nguyễn Triến</p>
       <p class="w3-medium">Đồ án chuyên ngành</p>
   </footer>
