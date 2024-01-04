@@ -7,7 +7,7 @@
   }
 </style>
 <div>
-    <h2 style="font-weight: bold; color: red; margin-bottom: 30px; text-align: center; ">THÔNG TIN CÁ NHÂN</h2>
+    <h2 style="font-weight: bold; color: blue; margin-bottom: 30px; text-align: center; ">THÔNG TIN CÁ NHÂN</h2>
 
     <?php
       $file_path = '../../QuanlyXML/Giangvien.xml';

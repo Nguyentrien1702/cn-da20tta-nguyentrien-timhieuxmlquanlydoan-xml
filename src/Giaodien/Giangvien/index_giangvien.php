@@ -53,9 +53,20 @@ textarea {
                 <span onclick="closeModal()" class="w3-button w3-display-topright">&times;</span>
                 <h2 style="text-transform: uppercase; color: blue; text-align: center; font-weight: bold;">Tạo đề tài</h2>
                 <div style="display: block;"> 
-                  <label for="" id="maloai" style="display: block;"></label>
-                  <label for="" id="user" style="display: block;"></label>
+                  <label for="" id="maloai" style="display: none;"></label>
+                  <label for="" id="user" style="display: none;"></label>
+                  <div style="display: flex;">
+                  <label for="">Tên loại: &nbsp;</label>
+                  <label for="" id="tenloai" style="display: block;"></label>
+                  </div>
+                  <div style="display: flex;">
+                  <label for="">Ngành: &nbsp</label>
+                  <label for="" id="tennganh" style="display: block;"></label>
+                  </div>
+                  <div style="display: flex;">
+                  <label for="">Năm học: &nbsp</label>
                   <label for="" id="namhoc" style="display: block;"></label>
+                  </div>
                   <label for="" id="result"></label>
                 </div>
                 <table id="data-table" class="w3-table w3-bordered w3-striped display">
@@ -137,6 +148,7 @@ textarea {
                     foreach ($xml1->loaidoan as $loaidoan) {
                       if((string)$loaidoan['maloaidoan'] == (string)$thoigian->maloaidoan){
                         echo "<td>".$loaidoan->tenloai."</td>";
+                        $tenloai = $loaidoan->tenloai;
                         break;
                       }
                     }
@@ -145,6 +157,7 @@ textarea {
                     foreach ($xml2->nganh as $nganh) {
                         if((string)$nganh['manganh'] == $manganh){
                           echo "<td>".$nganh->tennganh."</td>";
+                          $tennganh = $nganh->tennganh;
                           break;
                         }
                       }
@@ -162,7 +175,7 @@ textarea {
                     }
                     if($gv_sv == 0){
                       echo "<td style='text-align: center;'>
-                          <a id='radetai' href='#?matg=$matg' onclick='openModal(\"$maloai\", \"$user\", \"$namhoc\")' style='margin-right: 5px'>Ra đề tài</a>
+                          <a id='radetai' href='#?matg=$matg' onclick='openModal(\"$maloai\", \"$user\", \"$namhoc\", \"$tenloai\", \"$tennganh\")' style='margin-right: 5px'>Ra đề tài</a>
                               </td>";
                     }else{
                       echo "<td></td>";
@@ -177,9 +190,11 @@ textarea {
 
 
 <script>
-  function openModal(maloai, user, namhoc) {
+  function openModal(maloai, user, namhoc, tenloai, tennganh) {
     document.getElementById('maloai').innerHTML =maloai;
     document.getElementById('user').innerHTML =user;
+    document.getElementById('tenloai').innerHTML =tenloai;
+    document.getElementById('tennganh').innerHTML =tennganh;
     document.getElementById('namhoc').innerHTML =namhoc;
     uploadButtonClicked = true;
     document.getElementById('taodetai').style.display = 'block';

@@ -309,7 +309,7 @@ $xml1 = simplexml_load_file($xmlFilePath1);
         </div>
     </div>
 <div class="div-content">
-    <h1>Danh sách đề tài chờ xét duyệt</h1>
+    <h1 style="text-transform: uppercase; font-weight: bolder; Color: blue; text-align:center">Danh sách đề tài chờ xét duyệt</h1>
     <table id="accountTable" class="w3-table w3-bordered w3-striped display" style="width: 100%; margin-top: 10px;">
         <thead>
             <tr>

@@ -1,28 +1,119 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dsdetai>
   <detai madetai="CSN-TT-01">
-    <tendetai>Ứng dụng AI để tạo hồ sơ minh chứng điện tử cho giảng viên từ bản giấy</tendetai>
-    <mota>- Nghiên cứu các thư viện OCR với Python
-            - Tạo công cụ import ảnh của tài liệu và nhận dạng tên của cán bộ có trong tài liệu
-            - Đưa tài liệu vào cơ sở dữ liệu và gán cho các cán bộ có tên trong danh sách
-    </mota>
+    <tendetai>Tìm hiểu và thiết kế ứng dụng web minh hoạ W3css</tendetai>
+    <mota>W3.CSS framework</mota>
     <trangthaixetduyet>1</trangthaixetduyet>
     <maloaidoan>CSN-TT</maloaidoan>
-    <maloaidetai>TTNT</maloaidetai>
-    <msgv>00248</msgv>
+    <maloaidetai>UDW</maloaidetai>
+    <msgv>00246</msgv>
     <manganh>TT</manganh>
     <namhoc>2022-2023</namhoc>
     <ghichu/>
   </detai>
-  <detai madetai="CN-TT-02">
-    <tendetai>Xây dựng Website quản lý đoàn viên Khoa Kỹ thuật và Công nghệ</tendetai>
-    <mota>Xây dựng Website có các chức năng:
-            - Phân quyền đăng nhập
-            - Quản lý thông tin đoàn viên
-            - Quản lý hoạt động, phong trào của đoàn viên
-            - Đánh giá, xếp loại tình hình hoạt động của chi đoàn, đoàn viên
-    </mota>
+  <detai madetai="CSN-TT-02">
+    <tendetai>Tìm hiểu về Angularjs và thiết kế ứng dụng website minh hoạ.</tendetai>
+    <mota>Angularjs</mota>
     <trangthaixetduyet>1</trangthaixetduyet>
+    <maloaidoan>CSN-TT</maloaidoan>
+    <maloaidetai>UDW</maloaidetai>
+    <msgv>00246</msgv>
+    <manganh>TT</manganh>
+    <namhoc>2022-2023</namhoc>
+    <ghichu/>
+  </detai>
+  <detai madetai="CSN-TT-03">
+    <tendetai>Tìm hiểu BigBlueButton và ứng dụng trên LMS Moodle</tendetai>
+    <mota>Tìm hiểu và cài đặt BigBlueButton và ứng dụng vào LMS Moodle</mota>
+    <trangthaixetduyet>1</trangthaixetduyet>
+    <maloaidoan>CSN-TT</maloaidoan>
+    <maloaidetai>TBDD</maloaidetai>
+    <msgv>00243</msgv>
+    <manganh>TT</manganh>
+    <namhoc>2022-2023</namhoc>
+    <ghichu/>
+  </detai>
+  <detai madetai="CSN-TT-04">
+    <tendetai>Tìm hiểu ReactJS và xây dựng ứng dụng web minh họa</tendetai>
+    <mota>Tìm hiểu ReactJS framework và sử dụng framework này để lập trình phía front-end cho một ứng dụng web. SV tự chọn chủ đề cần quản lý/thiết kế cho ứng dụng web minh họa </mota>
+    <trangthaixetduyet>1</trangthaixetduyet>
+    <maloaidoan>CSN-TT</maloaidoan>
+    <maloaidetai>UDW</maloaidetai>
+    <msgv>00250</msgv>
+    <manganh>TT</manganh>
+    <namhoc>2022-2023</namhoc>
+    <ghichu/>
+  </detai>
+  <detai madetai="CSN-TT-05">
+    <tendetai>Tìm hiểu EmberJS và xây dựng ứng dụng web minh họa</tendetai>
+    <mota>Tìm hiểu EmberJS framework và sử dụng framework này để lập trình phía front-end cho một ứng dụng web. SV tự chọn chủ đề cần quản lý/thiết kế cho ứng dụng web minh họa </mota>
+    <trangthaixetduyet>1</trangthaixetduyet>
+    <maloaidoan>CSN-TT</maloaidoan>
+    <maloaidetai>UDW</maloaidetai>
+    <msgv>00250</msgv>
+    <manganh>TT</manganh>
+    <namhoc>2022-2023</namhoc>
+    <ghichu/>
+  </detai>
+  <detai madetai="CSN-TT-06">
+    <tendetai>Hiện thực câu truy vấn SQL dựa trên cơ sở dữ liệu  quản lý mượn thiết bị tại TVU</tendetai>
+    <mota/>
+    <trangthaixetduyet>1</trangthaixetduyet>
+    <maloaidoan>CSN-TT</maloaidoan>
+    <maloaidetai>CSDL</maloaidetai>
+    <msgv>00245</msgv>
+    <manganh>TT</manganh>
+    <namhoc>2022-2023</namhoc>
+    <ghichu/>
+  </detai>
+  <detai madetai="CN-TT-07">
+    <tendetai>Xây dựng website quản lý, thống kê nhà trọ Thành phố Trà Vinh</tendetai>
+    <mota>Phân tích, thiết kế CSDL và xây dựng website quản lý, thống kế nhà trọ trong phạm vi Thành phố Trà Vinh. Website giúp người dùng tham khảo để dễ dàng tìm kiếm nhà trọ dựa trên thống kế, đánh giá... Đề tài hướng đến việc sử dụng thực tế nên sinh viên cần thực hiện sát với nhu cầu, đáp ứng các chức năng gắn liền với thực tiễn.</mota>
+    <trangthaixetduyet>1</trangthaixetduyet>
+    <maloaidoan>CN-TT</maloaidoan>
+    <maloaidetai>UDW</maloaidetai>
+    <msgv>00234</msgv>
+    <manganh>TT</manganh>
+    <namhoc>2022-2023</namhoc>
+    <ghichu/>
+  </detai>
+  <detai madetai="CN-TT-08">
+    <tendetai>Xây dựng website giới thiệu điểm du lịch cộng đồng cồn chim bằng ExpressJS Framework.</tendetai>
+    <mota>Nghiên cứu NodeJS và tìm hiểu Framework: ExpressJS</mota>
+    <trangthaixetduyet>1</trangthaixetduyet>
+    <maloaidoan>CN-TT</maloaidoan>
+    <maloaidetai>UDW</maloaidetai>
+    <msgv>00235</msgv>
+    <manganh>TT</manganh>
+    <namhoc>2022-2023</namhoc>
+    <ghichu/>
+  </detai>
+  <detai madetai="CN-TT-09">
+    <tendetai>Nghiên cứu RESTful API với Java SpringBoot để xây dựng module backend cho ứng dụng Quản lý Quán Cafe</tendetai>
+    <mota>Nghiên cứu RESTful API, công nghệ Java SpringBoot, và cách sử dụng công cụ Postman dể test API</mota>
+    <trangthaixetduyet>0</trangthaixetduyet>
+    <maloaidoan>CN-TT</maloaidoan>
+    <maloaidetai>API</maloaidetai>
+    <msgv>00242</msgv>
+    <manganh>TT</manganh>
+    <namhoc>2022-2023</namhoc>
+    <ghichu/>
+  </detai>
+  <detai madetai="CN-TT-10">
+    <tendetai>Xây dựng Website nhận dạng âm thanh</tendetai>
+    <mota>Xây dựng Website cho phép sử dụng microphone của thiết bị để thực hiện việc ghi âm, có lựa chọn nghe lại, có thể lưu trực tiếp về thiết bị sau khi ghi âm, thực hiện việc chuyển đổi bản ghi âm thành văn bản</mota>
+    <trangthaixetduyet>0</trangthaixetduyet>
+    <maloaidoan>CN-TT</maloaidoan>
+    <maloaidetai>UDW</maloaidetai>
+    <msgv>00243</msgv>
+    <manganh>TT</manganh>
+    <namhoc>2022-2023</namhoc>
+    <ghichu/>
+  </detai>
+  <detai madetai="CN-TT-11">
+    <tendetai>Tìm hiểu ngôn ngữ XML và ứng dụng trong quản lý thông tin đồ án tại Bộ môn Công nghệ Thông tin</tendetai>
+    <mota/>
+    <trangthaixetduyet>0</trangthaixetduyet>
     <maloaidoan>CN-TT</maloaidoan>
     <maloaidetai>UDW</maloaidetai>
     <msgv>00246</msgv>
@@ -30,5 +121,59 @@
     <namhoc>2022-2023</namhoc>
     <ghichu/>
   </detai>
-  
+  <detai madetai="CN-TT-12">
+    <tendetai>Tìm hiểu Laravel Framework và xây dựng website bán máy tính</tendetai>
+    <mota>PHP Framework </mota>
+    <trangthaixetduyet>0</trangthaixetduyet>
+    <maloaidoan>CN-TT</maloaidoan>
+    <maloaidetai>UDW</maloaidetai>
+    <msgv>00246</msgv>
+    <manganh>TT</manganh>
+    <namhoc>2022-2023</namhoc>
+    <ghichu/>
+  </detai>
+  <detai madetai="CN-TT-13">
+    <tendetai>Xây dựng ứng dụng tra cứu phòng học với Xamarin</tendetai>
+    <mota>Ứng dụng tra cứu thông tin phòng học trên thiết bị di động (Android/iOS)</mota>
+    <trangthaixetduyet>0</trangthaixetduyet>
+    <maloaidoan>CN-TT</maloaidoan>
+    <maloaidetai>TBDD</maloaidetai>
+    <msgv>00247</msgv>
+    <manganh>TT</manganh>
+    <namhoc>2022-2023</namhoc>
+    <ghichu/>
+  </detai>
+  <detai madetai="CN-TT-14">
+    <tendetai>Ứng dụng Laravel Framework xây dựng website giới thiệu tour du lịch</tendetai>
+    <mota/>
+    <trangthaixetduyet>0</trangthaixetduyet>
+    <maloaidoan>CN-TT</maloaidoan>
+    <maloaidetai>UDW</maloaidetai>
+    <msgv>00249</msgv>
+    <manganh>TT</manganh>
+    <namhoc>2022-2023</namhoc>
+    <ghichu/>
+  </detai>
+  <detai madetai="CN-TT-15">
+    <tendetai>Ứng dụng Laravel Framework xây dựng website giới thiệu việc làm</tendetai>
+    <mota/>
+    <trangthaixetduyet>0</trangthaixetduyet>
+    <maloaidoan>CN-TT</maloaidoan>
+    <maloaidetai>UDW</maloaidetai>
+    <msgv>00249</msgv>
+    <manganh>TT</manganh>
+    <namhoc>2022-2023</namhoc>
+    <ghichu/>
+  </detai>
+  <detai madetai="CN-TT-16">
+    <tendetai>Ứng dụng Laravel Framework xây dựng website bán thiết bị tin học</tendetai>
+    <mota/>
+    <trangthaixetduyet>0</trangthaixetduyet>
+    <maloaidoan>CN-TT</maloaidoan>
+    <maloaidetai>UDW</maloaidetai>
+    <msgv>00249</msgv>
+    <manganh>TT</manganh>
+    <namhoc>2022-2023</namhoc>
+    <ghichu/>
+  </detai>
 </dsdetai>

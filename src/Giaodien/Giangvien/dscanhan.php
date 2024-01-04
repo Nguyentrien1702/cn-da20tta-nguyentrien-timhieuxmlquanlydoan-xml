@@ -138,7 +138,7 @@
                                 }
                                 $tg = "";
                                 foreach($xml_tg->thoigian as $thoigian){
-                                    if($maloaidoan == (string)$thoigian->maloaidoan && $thoigian->quyen == "giangvien"){
+                                    if($maloaidoan == (string)$thoigian->maloaidoan){
                                         if($thoigian->ngayketthuc >= date("Y-m-d")){
                                             $tg = "1";
                                             break;

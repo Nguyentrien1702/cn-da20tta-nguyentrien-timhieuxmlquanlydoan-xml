@@ -72,7 +72,7 @@ textarea {
                 <th class="table-header" >Ngày bắt đầu</th>
                 <th class="table-header" >Ngày kết thúc</th>
                 <th class="table-header" >Trạng thái</th>
-                <th class="table-header" >Thao tác</th>
+                <!-- <th class="table-header" >Thao tác</th> -->
             </tr>
         </thead>
         <tbody>
@@ -125,14 +125,15 @@ textarea {
                     }else{
                         echo "<td style='color: red'>Đã đóng</td>";
                     }
-                    if($gv_sv == 0){
-                        echo "<td></td>";
+                    echo "<td></td>";
+                    // if($gv_sv == 0){
+                    //     echo "<td></td>";
                       
-                    }else{
-                        echo "<td style='text-align: center;'>
-                        <a  href='#?matg=$matg' style='margin-right: 5px; color: gray'>Danh sách sv đăng ký</a>
-                            </td>";
-                    }
+                    // }else{
+                    //     echo "<td style='text-align: center;'>
+                    //     <a  href='#?matg=$matg' style='margin-right: 5px; color: gray'>Danh sách sv đăng ký</a>
+                    //         </td>";
+                    // }
                     echo "</tr>";
                   }
                 }

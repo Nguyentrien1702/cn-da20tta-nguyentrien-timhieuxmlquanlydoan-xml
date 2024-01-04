@@ -31,11 +31,14 @@
               $sodienthoai = (string) $sinh_vien->sodienthoai;
               $email = (string) $sinh_vien->email;
               $malop = (string) $sinh_vien->malop;
+              $tenlop = "";
+              $khoa = "";
               foreach ($xml1->lop as $lop) {
                 if ((string) $lop['malop'] == $malop) {
-                  $tenlop = (string) $lop->tenlop;
-                  $khoa = (string) $lop->khoa;
-                }break;
+                  $tenlop = $lop->tenlop;
+                  $khoa =  $lop->khoa;
+                  break;
+                }
               }
               // Thoát khỏi vòng lặp vì chúng ta đã tìm thấy sinh viên cần
               break;
@@ -66,7 +69,7 @@
             <input class="w3-input w3-border" type="text" id="email" name="txtemail" value="<?php echo $email; ?>">
 
             <label for="malop_sua">Mã Lớp:</label>
-            <input class="w3-input w3-border" type="text" id="lop" name="txtlop" value="<?php echo $malop." - ". $tenlop. " khóa ". $khoa; ?>">
+            <input readonly class="w3-input w3-border" type="text" id="lop" name="txtlop" value="<?php echo "".$malop." - ". $tenlop. " khóa ". $khoa; ?>">
 
             <button class='w3-btn w3-blue' type='submit' name='sbmcapnhat' style="margin-top: 20px; border-radius: 5px;">Cập nhật thông tin</button>
 

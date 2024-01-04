@@ -125,7 +125,7 @@ h1#td{
 
     <!-- Form sửa lớp -->
     <div id="form_sua"  class="form-them-sua" style="display: none;">
-        <h2 class="w3-container ten">Thêm Lớp Mới</h2>
+        <h2 class="w3-container ten">Cập nhật thông tin lớp</h2>
 
         <form class="w3-container" action="../../Xuly/Xuly_XML/Xuly_lop.php" method="post">
             <label for="malop">Mã Lớp:</label>

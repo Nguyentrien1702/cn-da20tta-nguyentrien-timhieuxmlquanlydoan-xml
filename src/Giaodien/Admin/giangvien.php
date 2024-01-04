@@ -131,7 +131,7 @@ h1#td{
 
     <!-- Form sửa giảng viên -->
     <div id="form_sua" class="form-them-sua" style="display: none;">
-        <h2 class="w3-container ten" >Sửa Giảng Viên Mới</h2>
+        <h2 class="w3-container ten" >Cập nhật thông tin Giảng Viên</h2>
 
         <form class="w3-container" action="../../Xuly/Xuly_XML/Xuly_giangvien.php" method="post">
             <label for="msgv">Mã Số Giảng Viên:</label>
@@ -168,7 +168,7 @@ h1#td{
         <div class="w3-modal-content w3-animate-zoom">
             <div class="w3-container" style="height: 200px;">
                 <span onclick="closeModal()" class="w3-button w3-display-topright">&times;</span>
-                <h2>Tải lên Tệp Excel</h2>
+                <h2 style="color: blue; font-weight: bold">Tải lên Tệp Excel</h2>
 
                 <!-- Form để tải lên tệp Excel -->
                 <form id="uploadForm" action="../../Xuly/Xuly_excel/Xuly_excel_giangvien.php" method="post"

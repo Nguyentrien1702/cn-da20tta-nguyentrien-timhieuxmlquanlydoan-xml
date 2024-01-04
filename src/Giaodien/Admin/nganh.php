@@ -131,7 +131,7 @@ h1#td{
     <h1 id="td">Danh sách ngành</h1>
 
     <button id="themmoi" class="w3-button w3-green" onclick="toggleForm()">Thêm mới</button>
-    <button id="nhapexcel" onclick="openModal()" class="w3-button w3-green nhapexcel">Nhập File</button>
+    <button id="nhapexcel" onclick="openModal()" class="w3-button w3-green nhapexcel" style="display: none;">Nhập File</button>
 
     <table id="accountTable" class="w3-table w3-bordered w3-striped display" style="width: 100%; margin-top: 10px;">
         <thead>

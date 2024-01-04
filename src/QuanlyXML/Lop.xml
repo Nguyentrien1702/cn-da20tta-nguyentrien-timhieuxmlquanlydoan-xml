@@ -15,5 +15,14 @@
     <khoa>2021</khoa>
     <manganh>TT</manganh>
   </lop>
-  
+  <lop malop="DA21TTA">
+    <tenlop>Công nghệ thông tin A</tenlop>
+    <khoa>2021</khoa>
+    <manganh>TT</manganh>
+  </lop>
+  <lop malop="DA21TTC">
+    <tenlop>Công nghệ thông tin C</tenlop>
+    <khoa>2021</khoa>
+    <manganh>TT</manganh>
+  </lop>
 </dslop>

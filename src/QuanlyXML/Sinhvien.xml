@@ -1,31 +1,143 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dssinhvien>
+  <sinhvien mssv="110121224">
+    <tensinhvien>Nguyễn Hoàng Thương</tensinhvien>
+    <gioitinh>Nam</gioitinh>
+    <sodienthoai/>
+    <email>110121224@st.tvu.edu.vn</email>
+    <malop>DA21TTC</malop>
+  </sinhvien>
+  <sinhvien mssv="110121101">
+    <tensinhvien>Trương Nguyễn Hoàng Thanh</tensinhvien>
+    <gioitinh>Nam</gioitinh>
+    <sodienthoai/>
+    <email>110121101@st.tvu.edu.vn</email>
+    <malop>DA21TTB</malop>
+  </sinhvien>
+  <sinhvien mssv="110121222">
+    <tensinhvien>Nguyễn Quốc Khánh</tensinhvien>
+    <gioitinh>Nam</gioitinh>
+    <sodienthoai/>
+    <email>110121222@st.tvu.edu.vn</email>
+    <malop>DA21TTC</malop>
+  </sinhvien>
+  <sinhvien mssv="110121029">
+    <tensinhvien>Lâm Quốc Huy</tensinhvien>
+    <gioitinh>Nam</gioitinh>
+    <sodienthoai/>
+    <email>110121029@st.tvu.edu.vn</email>
+    <malop>DA21TTA</malop>
+  </sinhvien>
+  <sinhvien mssv="110121053">
+    <tensinhvien>Nghị Tuấn Lộc</tensinhvien>
+    <gioitinh>Nam</gioitinh>
+    <sodienthoai/>
+    <email>110121053@st.tvu.edu.vn</email>
+    <malop>DA21TTA</malop>
+  </sinhvien>
+  <sinhvien mssv="110121027">
+    <tensinhvien>Trương Hoàng Hưng</tensinhvien>
+    <gioitinh>Nam</gioitinh>
+    <sodienthoai/>
+    <email>110121027@st.tvu.edu.vn</email>
+    <malop>DA21TTA</malop>
+  </sinhvien>
+  <sinhvien mssv="110121144">
+    <tensinhvien>Phạm Phước Vinh</tensinhvien>
+    <gioitinh>Nam</gioitinh>
+    <sodienthoai/>
+    <email>110121144@st.tvu.edu.vn</email>
+    <malop>DA21TTC</malop>
+  </sinhvien>
+  <sinhvien mssv="110121067">
+    <tensinhvien>Lâm Ngọc Triệu</tensinhvien>
+    <gioitinh>Nam</gioitinh>
+    <sodienthoai/>
+    <email>110121067@st.tvu.edu.vn</email>
+    <malop>DA21TTA</malop>
+  </sinhvien>
+  <sinhvien mssv="110121251">
+    <tensinhvien>Kim Hoàng Nam</tensinhvien>
+    <gioitinh>Nam</gioitinh>
+    <sodienthoai/>
+    <email>110121251@st.tvu.edu.vn</email>
+    <malop>DA21TTC</malop>
+  </sinhvien>
+  <sinhvien mssv="110121139">
+    <tensinhvien>Dương Trung Hiếu</tensinhvien>
+    <gioitinh>Nam</gioitinh>
+    <sodienthoai/>
+    <email>110121139@st.tvu.edu.vn</email>
+    <malop>DA21TTA</malop>
+  </sinhvien>
+  <sinhvien mssv="110121134">
+    <tensinhvien>Ngô Thị Trúc Xuân</tensinhvien>
+    <gioitinh>Nữ</gioitinh>
+    <sodienthoai/>
+    <email>110121134@st.tvu.edu.vn</email>
+    <malop>DA21TTA</malop>
+  </sinhvien>
   <sinhvien mssv="110120081">
     <tensinhvien>Nguyễn Triến</tensinhvien>
     <gioitinh>Nam</gioitinh>
-    <sodienthoai>0355871460</sodienthoai>
+    <sodienthoai/>
     <email>110120081@st.tvu.edu.vn</email>
     <malop>DA20TTA</malop>
+  </sinhvien>
+  <sinhvien mssv="110120013">
+    <tensinhvien>Nguyễn Minh Đăng</tensinhvien>
+    <gioitinh>Nam</gioitinh>
+    <sodienthoai/>
+    <email>110120013@st.tvu.edu.vn</email>
+    <malop>DA20TTB</malop>
   </sinhvien>
   <sinhvien mssv="110120008">
     <tensinhvien>Nguyễn Thị Ngọc Chăm</tensinhvien>
     <gioitinh>Nữ</gioitinh>
-    <sodienthoai>0337254189</sodienthoai>
+    <sodienthoai/>
     <email>110120008@st.tvu.edu.vn</email>
     <malop>DA20TTA</malop>
   </sinhvien>
-  <sinhvien mssv="110120164">
-    <tensinhvien>Mạch Khánh Duy</tensinhvien>
+  <sinhvien mssv="110120059">
+    <tensinhvien>Trương Sơn Sô Phát</tensinhvien>
     <gioitinh>Nam</gioitinh>
     <sodienthoai/>
-    <email>110120164@st.tvu.edu.vn</email>
+    <email>110120059@st.tvu.edu.vn</email>
+    <malop>DA20TTB</malop>
+  </sinhvien>
+  <sinhvien mssv="110120016">
+    <tensinhvien>Huỳnh Phúc Đạt</tensinhvien>
+    <gioitinh>Nam</gioitinh>
+    <sodienthoai/>
+    <email>110120016@st.tvu.edu.vn</email>
+    <malop>DA20TTB</malop>
+  </sinhvien>
+  <sinhvien mssv="110120161">
+    <tensinhvien>Nhan Lê Minh Trọng</tensinhvien>
+    <gioitinh>Nam</gioitinh>
+    <sodienthoai/>
+    <email>110120161@st.tvu.edu.vn</email>
+    <malop>DA20TTB</malop>
+  </sinhvien>
+  <sinhvien mssv="110120082">
+    <tensinhvien>Trần Vỹ Chiếc</tensinhvien>
+    <gioitinh>Nam</gioitinh>
+    <sodienthoai/>
+    <email>110120082@st.tvu.edu.vn</email>
     <malop>DA20TTA</malop>
   </sinhvien>
-  <sinhvien mssv="110120051">
-    <tensinhvien>Trần Trọng Nhân</tensinhvien>
+  <sinhvien mssv="110120170">
+    <tensinhvien>Phạm Trọng Nghĩa</tensinhvien>
     <gioitinh>Nam</gioitinh>
     <sodienthoai/>
-    <email/>
+    <email>110120170@st.tvu.edu.vn</email>
+    <malop>DA20TTA</malop>
+  </sinhvien>
+  <sinhvien mssv="110120027">
+    <tensinhvien>Lê Minh Hận</tensinhvien>
+    <gioitinh>Nam</gioitinh>
+    <sodienthoai/>
+    <email>110120027@st.tvu.edu.vn</email>
     <malop>DA20TTA</malop>
   </sinhvien>
 </dssinhvien>

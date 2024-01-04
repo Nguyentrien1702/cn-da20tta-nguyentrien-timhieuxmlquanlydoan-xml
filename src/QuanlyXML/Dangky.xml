@@ -1,17 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dsdangky>
   <dangky>
-    <madetai>CN-TT-02</madetai>
-    <mssv>110120081</mssv>
-    <msgv_hd>00248</msgv_hd>
+    <madetai>CSN-TT-04</madetai>
+    <mssv>110121224</mssv>
+    <msgv_hd>00250</msgv_hd>
     <namhoc>2022-2023</namhoc>
-    <ngaydangky>2023-12-26</ngaydangky>
+    <ngaydangky>2023-12-30</ngaydangky>
+  </dangky>
+  <dangky>
+    <madetai>CSN-TT-05</madetai>
+    <mssv>110121053</mssv>
+    <msgv_hd>00250</msgv_hd>
+    <namhoc>2022-2023</namhoc>
+    <ngaydangky>2023-12-30</ngaydangky>
+  </dangky>
+  <dangky>
+    <madetai>CSN-TT-03</madetai>
+    <mssv>110121027</mssv>
+    <msgv_hd>00243</msgv_hd>
+    <namhoc>2022-2023</namhoc>
+    <ngaydangky>2023-12-30</ngaydangky>
   </dangky>
   <dangky>
     <madetai>CSN-TT-01</madetai>
-    <mssv>110120051</mssv>
-    <msgv_hd>00248</msgv_hd>
+    <mssv>110121029</mssv>
+    <msgv_hd>00246</msgv_hd>
     <namhoc>2022-2023</namhoc>
-    <ngaydangky>2023-12-26</ngaydangky>
+    <ngaydangky>2024-01-04</ngaydangky>
   </dangky>
 </dsdangky>
