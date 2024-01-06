@@ -78,7 +78,7 @@ th {
 </div>
 
 <div class="div-content" style="width: 95%; margin:auto;">
-    <h1 style="text-align: center; color:blue; font-weight: bold; text-transform: uppercase; ">Danh sách sinh viên đăng ký đề tài</h1>
+    <h1 style="text-align: center; color:blue; font-weight: bold; text-transform: uppercase; margin-top: 80px !important;">Danh sách sinh viên đăng ký đề tài</h1>
     <div class="custom-datatable-style">
         <table id="accountTable" class="w3-table w3-bordered w3-striped display" style="width: 100%; margin-top: 10px;">
             <thead>

@@ -225,6 +225,8 @@ textarea {
             foreach($xml_gv->giangvien as $giangvien){
                 if((string)$giangvien['msgv'] == $msgv_hd){
                     $tengiangvien = $giangvien->tengiangvien;
+                    $sodienthoai = $giangvien->sodienthoai;
+                    $phong = $giangvien->phong;
                 }
             }
             foreach($xml_sv->sinhvien as $sinhvien){
@@ -253,9 +255,8 @@ textarea {
                     <th class="table-header" >Tên đề tài</th>
                     <th class="table-header" >Mô tả</th>
                     <th class="table-header" >GV hướng dẫn</th>
-                    <th class="table-header" >MSSV</th>
-                    <th class="table-header" >Họ tên SV</th>
-                    <th class="table-header" >Lớp</th>
+                    <th class="table-header" >Số điện thoại</th>
+                    <th class="table-header" >Phòng</th>
                     <th class="table-header" style="text-align: center;">Thao tác</th>
                 </tr>
             </thead>
@@ -265,9 +266,8 @@ textarea {
                     echo "<td class='mota'>".$tendetai."</td>";
                     echo "<td class='mota'>".$mota."</td>";
                     echo "<td>".$tengiangvien."</td>";
-                    echo "<td>".$mssv."</td>";
-                    echo "<td>".$tensinhvien."</td>";
-                    echo "<td>".$malop."</td>";
+                    echo "<td>".$sodienthoai."</td>";
+                    echo "<td>".$phong."</td>";
                     foreach($xml_tg->thoigian as $thoigian){
                         if(($thoigian->ngaybatdau<= date("Y-m-d")) && ($thoigian->ngayketthuc >= date("Y-m-d"))){
                             if((string)$thoigian->quyen == "sinhvien"){

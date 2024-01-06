@@ -128,7 +128,7 @@ h1#td{
         </div>
     </div>
 
-    <h1 id="td">Danh sách ngành</h1>
+    <h1 id="td" style="margin-top: 80px !important;">Danh sách ngành</h1>
 
     <button id="themmoi" class="w3-button w3-green" onclick="toggleForm()">Thêm mới</button>
     <button id="nhapexcel" onclick="openModal()" class="w3-button w3-green nhapexcel" style="display: none;">Nhập File</button>

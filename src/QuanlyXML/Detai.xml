@@ -9,7 +9,7 @@
     <msgv>00246</msgv>
     <manganh>TT</manganh>
     <namhoc>2022-2023</namhoc>
-    <ghichu/>
+    <ghichu>Có SV đăng ký</ghichu>
   </detai>
   <detai madetai="CSN-TT-02">
     <tendetai>Tìm hiểu về Angularjs và thiết kế ứng dụng website minh hoạ.</tendetai>
@@ -20,7 +20,7 @@
     <msgv>00246</msgv>
     <manganh>TT</manganh>
     <namhoc>2022-2023</namhoc>
-    <ghichu/>
+    <ghichu>Có SV đăng ký</ghichu>
   </detai>
   <detai madetai="CSN-TT-03">
     <tendetai>Tìm hiểu BigBlueButton và ứng dụng trên LMS Moodle</tendetai>
@@ -31,7 +31,7 @@
     <msgv>00243</msgv>
     <manganh>TT</manganh>
     <namhoc>2022-2023</namhoc>
-    <ghichu/>
+    <ghichu>Có SV đăng ký</ghichu>
   </detai>
   <detai madetai="CSN-TT-04">
     <tendetai>Tìm hiểu ReactJS và xây dựng ứng dụng web minh họa</tendetai>
@@ -42,7 +42,7 @@
     <msgv>00250</msgv>
     <manganh>TT</manganh>
     <namhoc>2022-2023</namhoc>
-    <ghichu/>
+    <ghichu>Có SV đăng ký</ghichu>
   </detai>
   <detai madetai="CSN-TT-05">
     <tendetai>Tìm hiểu EmberJS và xây dựng ứng dụng web minh họa</tendetai>
@@ -53,7 +53,7 @@
     <msgv>00250</msgv>
     <manganh>TT</manganh>
     <namhoc>2022-2023</namhoc>
-    <ghichu/>
+    <ghichu>Có SV đăng ký</ghichu>
   </detai>
   <detai madetai="CSN-TT-06">
     <tendetai>Hiện thực câu truy vấn SQL dựa trên cơ sở dữ liệu  quản lý mượn thiết bị tại TVU</tendetai>
@@ -91,7 +91,7 @@
   <detai madetai="CN-TT-09">
     <tendetai>Nghiên cứu RESTful API với Java SpringBoot để xây dựng module backend cho ứng dụng Quản lý Quán Cafe</tendetai>
     <mota>Nghiên cứu RESTful API, công nghệ Java SpringBoot, và cách sử dụng công cụ Postman dể test API</mota>
-    <trangthaixetduyet>0</trangthaixetduyet>
+    <trangthaixetduyet>1</trangthaixetduyet>
     <maloaidoan>CN-TT</maloaidoan>
     <maloaidetai>API</maloaidetai>
     <msgv>00242</msgv>

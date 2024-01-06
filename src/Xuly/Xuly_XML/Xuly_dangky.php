@@ -1,5 +1,6 @@
 <?php
 $xmlFilePath = '../../QuanlyXML/Dangky.xml';
+$xmlFilePath_detai = '../../QuanlyXML/Detai.xml';
 
 function issinhvienExists($xmlFilePath, $mssv, $namhoc) {
     $xml = simplexml_load_file($xmlFilePath);
@@ -49,6 +50,26 @@ function updateGv_hd($xmlFilePath, $madetai, $msgv_hd) {
             break;
         }
     }
+}
+
+function updateDetaighichu($xmlFilePath_detai, $madetai, $ghichu) {
+    $xml = simplexml_load_file($xmlFilePath_detai);
+
+    foreach ($xml->detai as $detai) {
+        if ((string)$detai['madetai'] === $madetai) {
+            $detai->ghichu = $ghichu;
+
+            $dom = new DOMDocument('1.0');
+            $dom->preserveWhiteSpace = false;
+            $dom->formatOutput = true;
+            $dom->loadXML($xml->asXML());
+            $dom->save($xmlFilePath_detai);
+
+            return true; // Cập nhật thành công
+        }
+    }
+
+    return false; // Không tìm thấy đề tài với mã đề tài cần cập nhật
 }
 function deletedangky($xmlFilePath, $madetai) {
     $xml = simplexml_load_file($xmlFilePath);
