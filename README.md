@@ -34,7 +34,7 @@ Dưới đây là các bước để cài đặt và chạy dự án trên máy 
 
 - Sao chép dự án từ repository của bạn bằng lệnh git clone.
   ```bash
-  git clone https://github.com/your-username/your-project.git
+  git clone https://github.com/Nguyentrien1702/cn-da20tta-nguyentrien-timhieuxmlquanlydoan-xml.git
   cd your-project
 
 # Cấu Hình Môi Trường Phát Triển:
