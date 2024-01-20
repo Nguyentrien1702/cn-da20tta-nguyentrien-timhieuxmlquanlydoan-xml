@@ -86,7 +86,7 @@
     <msgv>00235</msgv>
     <manganh>TT</manganh>
     <namhoc>2022-2023</namhoc>
-    <ghichu/>
+    <ghichu>Có SV đăng ký</ghichu>
   </detai>
   <detai madetai="CN-TT-09">
     <tendetai>Nghiên cứu RESTful API với Java SpringBoot để xây dựng module backend cho ứng dụng Quản lý Quán Cafe</tendetai>
@@ -97,12 +97,12 @@
     <msgv>00242</msgv>
     <manganh>TT</manganh>
     <namhoc>2022-2023</namhoc>
-    <ghichu/>
+    <ghichu>Có SV đăng ký</ghichu>
   </detai>
   <detai madetai="CN-TT-10">
     <tendetai>Xây dựng Website nhận dạng âm thanh</tendetai>
     <mota>Xây dựng Website cho phép sử dụng microphone của thiết bị để thực hiện việc ghi âm, có lựa chọn nghe lại, có thể lưu trực tiếp về thiết bị sau khi ghi âm, thực hiện việc chuyển đổi bản ghi âm thành văn bản</mota>
-    <trangthaixetduyet>0</trangthaixetduyet>
+    <trangthaixetduyet>1</trangthaixetduyet>
     <maloaidoan>CN-TT</maloaidoan>
     <maloaidetai>UDW</maloaidetai>
     <msgv>00243</msgv>
@@ -110,32 +110,10 @@
     <namhoc>2022-2023</namhoc>
     <ghichu/>
   </detai>
-  <detai madetai="CN-TT-11">
-    <tendetai>Tìm hiểu ngôn ngữ XML và ứng dụng trong quản lý thông tin đồ án tại Bộ môn Công nghệ Thông tin</tendetai>
-    <mota/>
-    <trangthaixetduyet>0</trangthaixetduyet>
-    <maloaidoan>CN-TT</maloaidoan>
-    <maloaidetai>UDW</maloaidetai>
-    <msgv>00246</msgv>
-    <manganh>TT</manganh>
-    <namhoc>2022-2023</namhoc>
-    <ghichu/>
-  </detai>
-  <detai madetai="CN-TT-12">
-    <tendetai>Tìm hiểu Laravel Framework và xây dựng website bán máy tính</tendetai>
-    <mota>PHP Framework </mota>
-    <trangthaixetduyet>0</trangthaixetduyet>
-    <maloaidoan>CN-TT</maloaidoan>
-    <maloaidetai>UDW</maloaidetai>
-    <msgv>00246</msgv>
-    <manganh>TT</manganh>
-    <namhoc>2022-2023</namhoc>
-    <ghichu/>
-  </detai>
   <detai madetai="CN-TT-13">
     <tendetai>Xây dựng ứng dụng tra cứu phòng học với Xamarin</tendetai>
     <mota>Ứng dụng tra cứu thông tin phòng học trên thiết bị di động (Android/iOS)</mota>
-    <trangthaixetduyet>0</trangthaixetduyet>
+    <trangthaixetduyet>1</trangthaixetduyet>
     <maloaidoan>CN-TT</maloaidoan>
     <maloaidetai>TBDD</maloaidetai>
     <msgv>00247</msgv>
@@ -172,6 +150,28 @@
     <maloaidoan>CN-TT</maloaidoan>
     <maloaidetai>UDW</maloaidetai>
     <msgv>00249</msgv>
+    <manganh>TT</manganh>
+    <namhoc>2022-2023</namhoc>
+    <ghichu/>
+  </detai>
+  <detai madetai="CN-TT-17">
+    <tendetai>Tìm hiểu ngôn ngữ XML và ứng dụng trong quản lý thông tin đồ án tại Bộ môn Công nghệ Thông tin</tendetai>
+    <mota/>
+    <trangthaixetduyet>0</trangthaixetduyet>
+    <maloaidoan>CN-TT</maloaidoan>
+    <maloaidetai>UDW</maloaidetai>
+    <msgv>00246</msgv>
+    <manganh>TT</manganh>
+    <namhoc>2022-2023</namhoc>
+    <ghichu/>
+  </detai>
+  <detai madetai="CN-TT-18">
+    <tendetai>Tìm hiểu Laravel Framework và xây dựng website bán máy tính</tendetai>
+    <mota/>
+    <trangthaixetduyet>0</trangthaixetduyet>
+    <maloaidoan>CN-TT</maloaidoan>
+    <maloaidetai>UDW</maloaidetai>
+    <msgv>00246</msgv>
     <manganh>TT</manganh>
     <namhoc>2022-2023</namhoc>
     <ghichu/>

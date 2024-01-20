@@ -294,7 +294,7 @@ $xml1 = simplexml_load_file($xmlFilePath1);
 ?>
     <div id="ghichu" class="w3-modal">
         <div class="w3-modal-content w3-animate-zoom" style="width: 400px;">
-            <div class="w3-container" style="height: 300px;">
+            <div class="w3-container" style="height: 250px;">
                 <span onclick="closeModalghichu()" class="w3-button w3-display-topright">&times;</span>
                 <form action="../../Xuly/Xuly_XML/Xuly_duyetdetai.php" method="post" style="margin-top: 30px;">
                     <input type="text" style="display:none;" id="madetai" name="madetai">

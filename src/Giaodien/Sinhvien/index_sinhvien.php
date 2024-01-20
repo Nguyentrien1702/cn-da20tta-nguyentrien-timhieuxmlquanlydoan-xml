@@ -276,9 +276,9 @@ textarea {
                                 </td>";
                                 break;
                             }
-                        }else{
-                            echo "<p><i>Ngoài thời gian</i></p>";
-                        }
+                        }//else{
+                        //     echo "<p><i>Ngoài thời gian</i></p>";
+                        // }
                     }
                 ?>
             </tbody>
